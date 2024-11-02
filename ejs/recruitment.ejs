@@ -1,0 +1,91 @@
+<div class="cms-main">
+	<%- include('common/_sidebar'); %>
+	<div class="cms-content">
+		<%- include('common/_header'); %>
+		<div class="candidate-page">
+			<div class="candidate-page__control">
+				<ul class="candidate-page__search">
+					<li class="candidate-page__search-field candidate-page__search-field--keyword">
+						<input type="text" class="form-control" placeholder="Tìm kiếm">
+					</li>
+				</ul>
+                <a href="#" class="c-btn__01 c-btn__01--add js-show-modal" data-modal="add-template">Tạo mới</a>
+			</div>
+			<div class="tabs-content current" id="vi">
+				<div class="cms-wrapper">
+					<div class="c-table c-table--recruitment">
+                        <table>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tiêu đề</th>
+                                <th>File</th>
+                                <th>Sử dụng</th>
+                                <th>Thời gian tạo</th>
+                                <th>Hành động</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>File CSV</td>
+                                <td><a href="#" class="txt-link">Filetuyendung.csv</a></td>
+                                <td><label for="">
+                                    <input type="radio" value="" checked>
+                                </label></td>
+                                <td>01/01/2022 12:21</td>
+                                <td>
+                                    <button class="btn-action"></button>
+                                    <ul class="action-content">
+                                        <li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+                                        <li class="action-content__delete"><a href="#">Xoá</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+				</div>
+				<%- include('common/_area_footer.ejs'); %>
+			</div>
+            <div class="tabs-content" id="jp">
+                <div class="cms-wrapper">
+                    <%- include('table/_table_faq.ejs'); %>
+                </div>
+                <%- include('common/_area_footer.ejs'); %>
+            </div>
+		</div>
+    </div>
+	</div>
+</div>
+
+
+
+<div class="c-modal create-company" id="add-template">
+	<div class="c-modal__wp">
+		<form action="" method="post" class="c-modal__form">
+			<h3 class="c-modal__ttl">Thêm mới template tuyển dụng</h3>
+			<div class="create-company__wp">
+				<dl class="create-company__field create-company__field--full">
+					<dt class="create-company__field-label"><span>*</span>Tiêu đề</dt>
+					<dd class="create-company__field-input">
+						<input type="text" class="form-control" placeholder="Nhập câu hỏi">
+					</dd>
+				</dl>
+				<dl class="create-company__field create-company__field--full">
+					<dt class="create-company__field-label"><span>*</span>Tải file CSV</dt>
+					<dd class="create-company__field-input">
+						<div class="upload-file">
+                            <img src="../img/common/ico-file.png" alt="" width="32">File name.xlsx
+                            <button class="upload-file__close"><img src="../img/common/x-close-red.png" alt="" width="24"></button> 
+                        </div>
+					</dd>
+				</dl>
+                <label class="c-switch">
+                    <input type="checkbox" checked />
+                    <div>Sử dụng</div>
+                </label>
+			</div>
+			<div class="c-modal__control">
+				<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+				<a href="#" class="c-btn__01">Thêm mới</a>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=1920">
+		<title>Master data</title>
+		<meta name="description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link type="text/css" rel="stylesheet" href="../css/styles.css">
+	</head>
+	<body>
+		<main id="page-master_data_candidate" class="wrapper">
+			<div class="cms-main">
+				<div class="cms-sidebar">
+					<h1 class="cms-sidebar__logo"><a href="#"><img src="../img/common/logo.png" alt=""></a></h1>
+					<ul class="cms-sidebar__nav">
+						<li class="cms-sidebar__nav-item"><a href="/dashboard/">Dashboard</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/manpower/">Công ty Nhật cần người</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/manpower_02/">Công ty cung ứng nhân lực</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/candidate/">Danh sách ứng viên</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/faq/">Câu hỏi thường gặp</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/recruitment/">Quản lý template</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/contact/">Quản lý Contact Us</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/master_data/">Master data</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/system/">Cài đặt hệ thống</a></li>
+					</ul>
+				</div>
+				<div class="cms-content">
+					<div class="cms-heading">
+						<h2 class="cms-heading__ttl">Master data</h2>
+						<ul class="cms-heading__control">
+							<li class="cms-heading__control-notification"><a href="#"><img src="../img/common/icon-notification.png" alt="" width="40"></a></li>
+							<li class="cms-heading__control-notification"><a href="#"><img src="../img/common/vn.png" alt="" width="24"></a></li>
+							<li class="cms-heading__control-user">
+								<a href="#" class="wp js-dropdown">
+									<div class="cms-heading__control-avatar">
+										<img src="../img/common/avatar.png" alt="">
+									</div>
+									<div class="cms-heading__control-info">
+										<span class="namme">Quản Trị Viên</span>
+										<span class="position">Super Admintrator</span>
+									</div>
+								</a>
+								<ul class="c-dropdown">
+									<li><a href="#" class="js-show-modal" data-modal="changepass"><img src="../img/common/ico-changepass.png" width="20" alt="">Đổi mật khẩu</a></li>
+									<li><a href="#" class="js-show-modal" data-modal="register"><img src="../img/common/password-check.png" width="20" alt="">Cấp lại mật khẩu</a></li>
+									<li><a href="#" class="js-show-modal" data-modal="form-logout"><img src="../img/common/logout.png" width="20" alt="">Đăng xuất</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="master-data">
+						<ul class="master-data__sidebar">
+							<li><a href="/master_data/">業務要約</a></li>
+							<li><a href="#">得意とする分野・スキル</a></li>
+							<li><a href="#">PCスキル/テクニカルスキル</a></li>
+							<li><a href="#">資格</a></li>
+							<li class="is-active"><a href="/master_data/candidate.html">Candidate status</a></li>
+							<li><a href="/master_data/contact.html">Contact Us Status</a></li>
+						</ul>
+						<div class="master-data__content">
+							<div class="master-data__heading">
+								<div class="master-data__heading-search">
+									<input type="text" class="form-control" placeholder="Tìm kiếm">
+								</div>
+								<button class="c-btn__01 c-btn__01--add js-show-modal" data-modal="add-status">Tạo mới</button>
+							</div>
+							<div class="cms-wrapper">
+								<div class="c-table c-table--master-data03">
+									<table>
+										<tr>
+											<th>STT</th>
+											<th>Tiếng Nhật</th>
+											<th>Tiếng Việt</th>
+											<th>Hành động</th>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>メールアドレス</td>
+											<td>Email</td>
+											<td>
+												<button class="btn-action"></button>
+												<ul class="action-content">
+													<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+													<li class="action-content__delete"><a href="#" class="js-show-modal" data-modal="form-logout">Xoá</a></li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>都市</td>
+											<td>Số điện thoại</td>
+											<td>
+												<button class="btn-action"></button>
+												<ul class="action-content">
+													<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+													<li class="action-content__delete"><a href="#">Xoá</a></li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>電話番号</td>
+											<td>Tỉnh/ Thành phố</td>
+											<td>
+												<button class="btn-action"></button>
+												<ul class="action-content">
+													<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+													<li class="action-content__delete"><a href="#">Xoá</a></li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>日本で働く希望がありますか</td>
+											<td>Mong muốn làm việc tại Nhật</td>
+											<td>
+												<button class="btn-action"></button>
+												<ul class="action-content">
+													<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+													<li class="action-content__delete"><a href="#">Xoá</a></li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>希望給料</td>
+											<td>Mức lương mong muốn</td>
+											<td>
+												<button class="btn-action"></button>
+												<ul class="action-content">
+													<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+													<li class="action-content__delete"><a href="#">Xoá</a></li>
+												</ul>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c-modal create-company" id="add-status">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<h3 class="c-modal__ttl">Thêm mới trạng thái Contact Us</h3>
+						<div class="create-company__wp">
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Tiếng Nhật</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên kênh">
+								</dd>
+							</dl>
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Tiếng Việt</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên kênh">
+								</dd>
+							</dl>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+							<a href="#" class="c-btn__01">Thêm mới</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal create-company" id="add-skillsub">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<h3 class="c-modal__ttl">Thêm mới trạng thái ứng viên</h3>
+						<div class="create-company__wp">
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Lĩnh vực/kỹ năng chuyên môn</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên kênh">
+								</dd>
+							</dl>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+							<a href="#" class="c-btn__01">Thêm mới</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal" id="form-logout">
+				<span class="c-modal__btn-close js-cancel"></span>
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<span class="c-modal__close"><img src="../img/common/x-close.png" alt="" width="24"></span>
+						<h3 class="c-modal__ttl">Xoá trạng thái ứng viên</h3>
+						<div class="c-modal__desc"> Bạn có chắc muốn xoá trạng thái ứng viên không? </div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray js-cancel">いいえ</button>
+							<a href="/" class="c-btn__01">はい</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="../js/jquery-ui.min.js"></script>
+		<script src="../js/setting.js"></script>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+@use 'vars' as *;
+
+.company-detail{
+	padding-bottom: 30px;
+	&__wp{
+		@include flex(between, 0, wrap);
+		@include font-size(16);
+	}
+	&__field{
+		margin-bottom: 24px;
+		font-family: $font-Monterrat;
+		&-label{
+			@include font-size(14);
+			color: #64748B;
+			margin-bottom: 6px;
+			font-weight: 600;
+		}
+		&-text{
+			font-weight: 500;
+			@include fts(16, 25.6);
+			.label-status{
+				@include font-size(14);
+				padding: 5px;
+				max-width: 135px;
+			}
+		}
+		&-shortUrl{
+			@include flex(0, center);
+			a{
+				color: #3491FF;
+				margin-left: 12px;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+
+.shorturl-input{
+	margin-top: 17px;
+	position: relative;
+	.form-control{
+		background: #F6F8FC;
+	}
+	&__copy{
+		color: $color-main;
+		position: absolute;
+		top: 12px;
+		right: 16px;
+		background: none;
+		outline: 0;
+		border: none;
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		padding: 0;
+		@include p-before(20px, 20px){
+			background: url(../img/common/copy.png) no-repeat center/100%;
+			position: relative;
+			margin-right: 10px;
+		}
+	}
+}

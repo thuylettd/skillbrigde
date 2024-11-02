@@ -1,0 +1,40 @@
+<div class="cms-main">
+	<%- include('common/_sidebar'); %>
+	<div class="cms-content">
+		<%- include('common/_header'); %>
+		<div class="candidate-page">
+			<div class="candidate-heading">
+				<ul class="candidate-heading__tabs c-tabs">
+					<li data-tab="vi" class="is-active">Việt Nam</li>
+					<li data-tab="jp">Japan</li>
+				</ul>
+				<div class="candidate-heading__dropdown">
+					<a href="#" class="c-btn__01 c-btn__01--add js-show-modal" data-modal="add-faq">Tạo mới</a>
+				</div>
+			</div>
+			<div class="candidate-page__control">
+				<ul class="candidate-page__search">
+					<li class="candidate-page__search-field candidate-page__search-field--keyword">
+						<input type="text" class="form-control" placeholder="Tìm kiếm">
+					</li>
+				</ul>
+			</div>
+			<div class="tabs-content current" id="vi">
+				<div class="cms-wrapper">
+					<%- include('table/_table_faq.ejs'); %>
+				</div>
+				<%- include('common/_area_footer.ejs'); %>
+			</div>
+            <div class="tabs-content" id="jp">
+                <div class="cms-wrapper">
+                    <%- include('table/_table_faq.ejs'); %>
+                </div>
+                <%- include('common/_area_footer.ejs'); %>
+            </div>
+		</div>
+    </div>
+	</div>
+</div>
+
+
+

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('AvertaStdCY-Semibold.eot');
+    src: url('AvertaStdCY-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('AvertaStdCY-Semibold.woff2') format('woff2'),
+        url('AvertaStdCY-Semibold.woff') format('woff'),
+        url('AvertaStdCY-Semibold.ttf') format('truetype'),
+        url('AvertaStdCY-Semibold.svg#AvertaStdCY-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

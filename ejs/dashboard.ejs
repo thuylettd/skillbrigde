@@ -1,0 +1,130 @@
+<div class="cms-main">
+	<%- include('common/_sidebar'); %>
+	<div class="cms-content">
+		<%- include('common/_header'); %>
+		<div class="dashboard-content">
+			<ul class="dashboard-content__top">
+				<li class="dashboard-content__top-item">
+					<div class="icon"><img src="../img/common/ico-dashboard-01.png" alt=""></div>
+					<div class="dashboard-content__top-title">
+						<span class="txt">Tổng số công ty Nhật cần người</span>
+						<small class="number">125</small>
+					</div>
+				</li>
+				<li class="dashboard-content__top-item">
+					<div class="icon"><img src="../img/common/ico-dashboard-02.png" alt=""></div>
+					<div class="dashboard-content__top-title">
+						<span class="txt">Số công ty Nhật cần người</span>
+						<small class="number">18</small>
+					</div>
+				</li>
+				<li class="dashboard-content__top-item">
+					<div class="icon"><img src="../img/common/ico-dashboard-03.png" alt=""></div>
+					<div class="dashboard-content__top-title">
+						<span class="txt">Tổng số hồ sơ ứng viên</span>
+						<small class="number">515</small>
+					</div>
+				</li>
+				<li class="dashboard-content__top-item">
+					<div class="icon"><img src="../img/common/ico-dashboard-04.png" alt=""></div>
+					<div class="dashboard-content__top-title">
+						<span class="txt">Số hồ sơ ứng viên chờ chấp thuận</span>
+						<small class="number">20</small>
+					</div>
+				</li>
+			</ul>
+			<div class="dashboard-content__chartjs">
+				<div class="dashboard-content__chartjs-heading">
+					<h3 class="dashboard-content__chartjs-ttl">Biều đồ</h3>
+					<ul class="dashboard-content__chartjs-datepicker">
+						<li><input type="date" value="01/01/2024" class="form-control"></li>
+						<li><input type="date" value="01/01/2024" class="form-control"></li>
+					</ul>
+				</div>
+				<ul class="dashboard-content__chartjs-tabs c-tabs">
+					<li data-tab="tabs01" class="is-active"><span>số lượng acc là công ty nhật cần người</span></li>
+					<li data-tab="tabs02"><span>Số hồ sơ ứng viên đăng ký</span></li>
+					<li data-tab="tabs03"><span>Số User đang được quan tâm</span></li>
+				</ul>
+				<div class="tabs-content current" id="tabs01">
+					<div class="dashboard-content__chartjs-img">
+						<img src="../img/dashboard/Chart.png" alt="">
+					</div>
+				</div>
+				<div class="tabs-content" id="tabs02">
+					<div class="dashboard-content__chartjs-img">
+						<img src="../img/dashboard/Chart.png" alt="">
+					</div>
+				</div>
+				<div class="tabs-content" id="tabs03">
+					<div class="dashboard-content__chartjs-img">
+						<img src="../img/dashboard/Chart.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="c-modal" id="register">
+	<span class="c-modal__btn-close js-cancel"></span>
+	<div class="c-modal__wp">
+		<form action="" method="post" class="c-modal__form">
+			<h3 class="c-modal__ttl">パスワードリセット</h3>
+			<span class="error">入力したメールアドレスはまだ登録されていません。</span>
+			<dl class="c-modal__dl">
+				<dt class="c-modal__dt">メールアドレス<span>*</span></dt>
+				<dd class="c-modal__dd">
+					<input type="text" placeholder="example@gmail.com">
+				</dd>
+			</dl>
+			<button class="c-btn__01">送信</button>
+			<div class="c-modal__register"><a href="#" class="txt-link js-cancel" data-modal="login">キャンセル</a></div>
+		</form>
+	</div>
+</div>
+
+<div class="c-modal" id="changepass">
+	<span class="c-modal__btn-close js-cancel"></span>
+	<div class="c-modal__wp">
+		<form action="" method="post" class="c-modal__form">
+			<h3 class="c-modal__ttl">パスワードリセット</h3>
+			<div class="c-modal__desc">
+				パスワードは、8文字以上、大文字と小文字の両方を含め、数字を1文字以上含む必要があります。
+			</div>
+			<dl class="c-modal__dl">
+				<dt class="c-modal__dt">新しいパスワード</dt>
+				<dd class="c-modal__dd">
+					<input type="password" placeholder="入力してください">
+				</dd>
+			</dl>
+			<dl class="c-modal__dl">
+				<dt class="c-modal__dt">新しいパスワード</dt>
+				<dd class="c-modal__dd">
+					<input type="password" placeholder="入力してください">
+				</dd>
+			</dl>
+			<button class="c-btn__01">送信</button>
+			<div class="c-modal__register"><a href="#" class="txt-link js-cancel" data-modal="login">キャンセル</a></div>
+		</form>
+	</div>
+</div>
+
+<div class="c-modal" id="form-logout">
+	<span class="c-modal__btn-close js-cancel"></span>
+	<div class="c-modal__wp">
+		<form action="" method="post" class="c-modal__form">
+			<span class="c-modal__close"><img src="../img/common/x-close.png" alt="" width="24"></span>
+			<h3 class="c-modal__ttl">ログアウト</h3>
+			<div class="c-modal__desc">
+				ログアウトしますか
+			</div>
+			<div class="c-modal__control">
+				<button class="c-btn__01 c-btn__01--gray js-cancel">いいえ</button>
+				<a href="/" class="c-btn__01">はい </a>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+

@@ -1,0 +1,124 @@
+<div class="cms-main">
+	<%- include('common/_sidebar'); %>
+	<div class="cms-content">
+		<%- include('common/_header'); %>
+		<div class="master-data">
+			<ul class="master-data__sidebar">
+				<li><a href="#">業務要約</a></li>
+				<li><a href="#">得意とする分野・スキル</a></li>
+				<li><a href="#">PCスキル/テクニカルスキル</a></li>
+				<li><a href="#">資格</a></li>
+				<li><a href="#">Candidate status</a></li>
+				<li class="is-active"><a href="#">Contact Us Status</a></li>
+			</ul>
+			<div class="master-data__content">
+				<div class="master-data__heading">
+					<div class="master-data__heading-search">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm">
+                    </div>
+					<button class="c-btn__01 c-btn__01--add js-show-modal" data-modal="add-status">Tạo mới</button>
+				</div>
+				<div class="cms-wrapper">
+					<div class="c-table c-table--master-data03">
+						<table>
+							<tr>
+								<th>STT</th>
+								<th>Status tiếng Nhật</th>
+								<th>Status tiếng Việt</th>
+								<th>Hành động</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>Status 1</td>
+								<td>Status 1</td>
+								<td>
+									<button class="btn-action"></button>
+									<ul class="action-content">
+										<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+										<li class="action-content__delete"><a href="#" class="js-show-modal" data-modal="form-logout">Xoá</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Status 2</td>
+								<td>Status 2</td>
+								<td>
+									<button class="btn-action"></button>
+									<ul class="action-content">
+										<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+										<li class="action-content__delete"><a href="#">Xoá</a></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="c-modal create-company" id="add-status">
+	<div class="c-modal__wp">
+		<form action="" method="post" class="c-modal__form">
+			<h3 class="c-modal__ttl">Thêm mới trạng thái Contact Us</h3>
+			<div class="create-company__wp">
+				<dl class="create-company__field create-company__field--full">
+					<dt class="create-company__field-label"><span>*</span>Tiếng Nhật</dt>
+					<dd class="create-company__field-input">
+						<input type="text" class="form-control" placeholder="Nhập tên kênh">
+					</dd>
+				</dl>
+				<dl class="create-company__field create-company__field--full">
+					<dt class="create-company__field-label"><span>*</span>Tiếng Việt</dt>
+					<dd class="create-company__field-input">
+						<input type="text" class="form-control" placeholder="Nhập tên kênh">
+					</dd>
+				</dl>
+			</div>
+			<div class="c-modal__control">
+				<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+				<a href="#" class="c-btn__01">Thêm mới</a>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="c-modal create-company" id="add-skillsub">
+	<div class="c-modal__wp">
+		<form action="" method="post" class="c-modal__form">
+			<h3 class="c-modal__ttl">Thêm mới kỹ năng con cho サーバ</h3>
+			<div class="create-company__wp">
+				<dl class="create-company__field create-company__field--full">
+					<dt class="create-company__field-label"><span>*</span>Lĩnh vực/kỹ năng chuyên môn</dt>
+					<dd class="create-company__field-input">
+						<input type="text" class="form-control" placeholder="Nhập tên kênh">
+					</dd>
+				</dl>
+			</div>
+			<div class="c-modal__control">
+				<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+				<a href="#" class="c-btn__01">Thêm mới</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="c-modal" id="form-logout">
+	<span class="c-modal__btn-close js-cancel"></span>
+	<div class="c-modal__wp">
+		<form action="" method="post" class="c-modal__form">
+			<span class="c-modal__close"><img src="../img/common/x-close.png" alt="" width="24"></span>
+			<h3 class="c-modal__ttl">Xoá trạng thái Contact Us</h3>
+			<div class="c-modal__desc">
+				Bạn có chắc chắn muốn xoá trạng thái Contact Us này không ?
+			</div>
+			<div class="c-modal__control">
+				<button class="c-btn__01 c-btn__01--gray js-cancel">いいえ</button>
+				<a href="/" class="c-btn__01">はい </a>
+			</div>
+		</form>
+	</div>
+</div>
+
+

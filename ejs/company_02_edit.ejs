@@ -1,0 +1,104 @@
+<div class="cms-main">
+	<%- include('common/_sidebar'); %>
+	<div class="cms-content">
+		<%- include('common/_header'); %>
+		<div class="company-detail">
+			<div class="area-control company-detail__control">
+				<div class="breadcrumb">
+					<a href="/manpower/">Công ty cung ứng nhân lực</a><span>Chỉnh sửa công ty</span>
+				</div>
+				<div class="btn-group">
+					<a href="#" class="c-btn__01 c-btn__01--gray">Huỷ bỏ</a>
+					<a href="#" class="c-btn__01">Lưu lại</a>
+				</div>
+			</div>
+			<div class="cms-wrapper">
+				<div class="c-layout c-layout--types02">
+					<div class="c-layout__left">
+						<h2 class="c-ttl__01">THÔNG TIN CÔNG TY</h2>
+						<dl class="form-group">
+							<dt class="form-group__label"><span>*</span>Tên công ty</dt>
+							<dd class="form-group__input"><input type="text" class="form-control" placeholder="Nhập tên công ty" value="The Walt Disney Company"></dd>
+						</dl>
+						<dl class="form-group">
+							<dt class="form-group__label">Số điện thoại</dt>
+							<dd class="form-group__input"><input type="text" class="form-control" placeholder="Nhập số điện thoại" value="0987 123 456"></dd>
+						</dl>
+						<dl class="form-group">
+							<dt class="form-group__label">Trạng thái hoạt động</dt>
+							<dd class="form-group__input">
+								<dd class="company-detail__field-text">
+									<label class="c-switch">
+										<input type="checkbox" checked />
+										<div>Đang hoạt động</div>
+									</label>
+								</dd>
+							</dd>
+						</dl>
+						<dl class="form-group">
+							<dt class="form-group__label">URL ứng viên</dt>
+							<dd class="form-group__input">
+								<dd class="company-detail__field-text">
+									<label class="c-switch">
+										<input type="checkbox" checked />
+										<div>Đang hoạt động</div>
+									</label>
+									<div class="shorturl-input">
+										<input type="text" class="form-control" placeholder="Nhập URL" value="http://skillbridge.com/recuirment/disneycopany">
+										<button class="shorturl-input__copy">Copy</button>
+									</div>
+								</dd>
+							</dd>
+						</dl>
+						<dl class="form-group">
+							<dt class="form-group__label">Ghi chú</dt>
+							<dd class="form-group__input">
+								<img src="../img/company/Input Field.png" alt="Ghi chú">
+							</dd>
+						</dl>
+					</div>
+					<div class="c-layout__right">
+						<h2 class="c-ttl__01">NGƯỜI ĐẠI DIỆN</h2>
+						<div class="representative-box">
+							<p class="representative-box__label">Người đại diện 1</p>
+							<a href="#" class="c-btn__delete representative-box__del">Xoá</a>
+							<div class="representative-box__field">
+								<dl class="representative-box__dl">
+									<dt class="representative-box__dt">Tên người đại diện</dt>
+									<dd class="representative-box__dd"><input type="text" class="form-control" value="Hoàng Thị Yến" placeholder="Nhập tên người đại diện"></dd>
+								</dl>
+								<dl class="representative-box__dl">
+									<dt class="representative-box__dt">Phương thức liên lạc</dt>
+									<dd class="representative-box__dd"><input type="text" class="form-control" value="0985859543" placeholder="Nhập phương thức liên lạc"></dd>
+								</dl>
+								<dl class="representative-box__dl">
+									<dt class="representative-box__dt">Chức danh</dt>
+									<dd class="representative-box__dd"><input type="text" class="form-control" value="Giám đốc" placeholder="Nhập chức danh"></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="representative-box">
+							<p class="representative-box__label">Người đại diện 2</p>
+							<a href="#" class="c-btn__delete representative-box__del">Xoá</a>
+							<div class="representative-box__field">
+								<dl class="representative-box__dl">
+									<dt class="representative-box__dt">Tên người đại diện</dt>
+									<dd class="representative-box__dd"><input type="text" class="form-control" value="Trần Gia Vỹ" placeholder="Nhập tên người đại diện"></dd>
+								</dl>
+								<dl class="representative-box__dl">
+									<dt class="representative-box__dt">Phương thức liên lạc</dt>
+									<dd class="representative-box__dd"><input type="text" class="form-control" value="vytrangia@gmail.com" placeholder="Nhập phương thức liên lạc"></dd>
+								</dl>
+								<dl class="representative-box__dl">
+									<dt class="representative-box__dt">Chức danh</dt>
+									<dd class="representative-box__dd"><input type="text" class="form-control" value="Trưởng phòng" placeholder="Nhập chức danh"></dd>
+								</dl>
+							</div>
+						</div>
+						<a href="#" class="c-txt__add">Thêm người đại diện</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

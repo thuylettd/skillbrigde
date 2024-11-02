@@ -1,0 +1,596 @@
+<div class="cms-main">
+	<%- include('common/_sidebar'); %>
+	<div class="cms-content">
+		<%- include('common/_header'); %>
+		<div class="company-detail">
+			<div class="area-control company-detail__control">
+				<div class="breadcrumb">
+					<a href="/candidate/">Danh sách ứng viên</a><span>Chi tiết ứng viên</span>
+				</div>
+				<div class="btn-group">
+					<a href="#" class="c-btn__01 c-btn__01--gray">Trở lại</a>
+				</div>
+			</div>
+			<div class="cms-wrapper">
+				<form action="" method="post" id="page-register_form">
+                    <section class="register-form">
+                        <div class="inner">
+                            <div class="download-file">
+                                <p class="download-file__txt txt-link"><img src="../img/common/ico-file.png" alt="" width="30">filedangky_Riko Sato.xlsx</p>
+                                <a href="#" class="btn-download c-btn__01">Tải xuống <img src="../img/common/download.png" alt="" width="24"></a>
+                            </div>
+                            <div class="register-form__wp">
+                                <ul class="c-tabs">
+                                    <li data-tab="vi">Việt Nam</li>
+                                    <li data-tab="jp" class="is-active">Japan</li>
+                                </ul>
+                                <h1 class="register-form__ttl c-ttl__02">
+                                    <span>職務経歴登録</span>
+                                </h1>
+                                <div class="register-form__form">
+                                    <dl class="register-form__dl">
+                                        <dt class="register-form__dt">基本情報</dt>
+                                        <dd class="register-form__dd form-grid">
+                                            <dl class="form-group">
+                                                <dt class="form-group__label"><span>*</span>メールアドレス </dt>
+                                                <dd class="form-group__input is-error">
+                                                    <input type="text" class="form-control" placeholder="メールアドレスを入力してください。">
+                                                    <span class="error03">* 必須項目ですので、ご入力をお願いいたします。</span>
+                                                </dd>
+                                            </dl>
+                                            <dl class="form-group">
+                                                <dt class="form-group__label"><span>*</span>電話番号</dt>
+                                                <dd class="form-group__input">
+                                                    <input type="text" class="form-control" placeholder="電話番号を入力してください。">
+                                                </dd>
+                                            </dl>
+                                            <dl class="form-group">
+                                                <dt class="form-group__label"><span>*</span>都市</dt>
+                                                <dd class="form-group__input">
+                                                    <select name="" id="" class="form-control form-control--select">
+                                                        <option value="">都市を選択したください。</option>
+                                                        <option value="option01">option01</option>
+                                                        <option value="option02">option02</option>
+                                                        <option value="option03">option03</option>
+                                                        <option value="option04">option04</option>
+                                                    </select>
+                                                </dd>
+                                            </dl>
+                                            <dl class="form-group">
+                                                <dt class="form-group__label"><span>*</span>区</dt>
+                                                <dd class="form-group__input">
+                                                    <select name="" id="" class="form-control form-control--select">
+                                                        <option value="">都市を選択したください。</option>
+                                                        <option value="option01">option01</option>
+                                                        <option value="option02">option02</option>
+                                                        <option value="option03">option03</option>
+                                                        <option value="option04">option04</option>
+                                                    </select>
+                                                </dd>
+                                            </dl>
+                                            <dl class="form-group form-group--radio form-group--confirm-job">
+                                                <dt class="form-group__label">日本で働く希望がありますか</dt>
+                                                <dd class="form-group__input">
+                                                    <label>
+                                                        <input type="radio" class="form-radio" value="考え" name="日本で働く希望がありますか">
+                                                        <span class="txt-radio">考え</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" class="form-radio" value="有り" name="日本で働く希望がありますか">
+                                                        <span class="txt-radio">有り</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" class="form-radio" value="無し" name="日本で働く希望がありますか">
+                                                        <span class="txt-radio">無し</span>
+                                                    </label>
+                                                </dd>
+                                            </dl>
+                                            <dl class="form-group">
+                                                <dt class="form-group__label"><span>*</span>希望給料</dt>
+                                                <dd class="form-group__input">
+                                                    <input type="text" placeholder="約◯◯億ドン" class="form-control">
+                                                </dd>
+                                            </dl>
+                                            <dl class="form-group form-group--upload">
+                                                <dt class="form-group__label">顔写真をアップロード</dt>
+                                                <dd class="form-group__input">
+                                                    <div class="form-upload">
+                                                        <div class="form-upload__img">
+                                                            <img src="../img/common/ico-picture.png" alt="">
+                                                        </div>
+                                                        <div class="form-upload__caption">
+                                                            <span>ここへ画像をドラッグまたはここをクリックして追加</span>
+                                                            <small>Supports: PNG, JPG, JPEG, WEBP</small>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl class="form-group">
+                                                <dt class="form-group__label"><span>*</span>氏名</dt>
+                                                <dd class="form-group__input">
+                                                    <input type="text" placeholder="氏名を入力してください。" class="form-control">
+                                                </dd>
+                                            </dl>
+                                            <dl class="form-group">
+                                                <dt class="form-group__label">生年月日</dt>
+                                                <dd class="form-group__input">
+                                                    <input type="text" placeholder="氏名を入力してください。" class="form-control">
+                                                </dd>
+                                            </dl>
+                                            <dl class="form-group form-group--full form-group--styles02">
+                                                <dt class="form-group__label"><span>*</span>生年月日<a href="#" class="btn-show-copy"><img src="../img/common/ico-note.png" alt="" width="15"></a></dt>
+                                                <dd class="form-group__input">
+                                                    <img src="../img/common/editor.png" alt="生年月日">
+                                                    <div class="modal-copy">
+                                                        <a href="#" class="btn-copy">Copy</a>
+                                                        <div class="modal-copy__txt">
+                                                            <p>20◯◯年、株式会社△△に入社しました。</p>
+                                                            <p>入社後◯年間、主にインフラエンジニアとして、△△向けのサーバ(ネットワーク機器)の(要件定義/基本設計/詳細設計/構築/設定/運用保守/監視)業務に従事し、(最大◯名のチームのリーダー/最大◯名のプロジェクトのマネジメント/顧客折衝/後輩教育)も担当した経験があります。</p>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                    <dl class="register-form__dl">
+                                        <dt class="register-form__dt">得意とする分野・スキル</dt>
+                                        <dd class="register-form__dd form-grid">
+                                            <dl class="form-group form-group--full form-group--styles02 mbsp-1">
+                                                <dt class="form-group__label"><span>*</span>得意とする分野・スキル<a href="" class="txt-link js-show-modal" data-modal="register-skill">参考</a></dt>
+                                                <dd class="form-group__input">
+                                                    <!-- <img src="../img/common/editor.png" alt="得意とする分野・スキル">
+                                                    <div class="register-form__list-skills">
+                    
+                                                    </div> -->
+                                                    <textarea name="" id="register-form__list-skills" cols="30" rows="10" class="form-control form-control--textarea"></textarea>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                    <dl class="register-form__dl">
+                                        <dt class="register-form__dt">PCスキル/テクニカルスキル</dt>
+                                        <dd class="register-form__dd">
+                                            <dl class="acc-skills is-active">
+                                                <dt class="acc-skills__dt">担当業務</dt>
+                                                <dd class="acc-skills__dd" style="display: block;">
+                                                    <ul class="acc-skills__list">
+                                                        <li class="acc-skills__list-item">
+                                                            <div class="acc-skills__dd-left">
+                                                                <label class="acc-skills__dd-checker">
+                                                                    <input type="checkbox" value="企画" checked>
+                                                                    <span class="txt-checkbox">企画</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="acc-skills__dd-right">
+                                                                <input type="text" placeholder="◯年" class="form-control">
+                                                                <input type="text" placeholder="◯年" class="form-control">
+                                                            </div>
+                                                        </li>
+                                                        <li class="acc-skills__list-item">
+                                                            <div class="acc-skills__dd-left">
+                                                                <label class="acc-skills__dd-checker">
+                                                                    <input type="checkbox" value="企画" checked>
+                                                                    <span class="txt-checkbox">企画</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="acc-skills__dd-right">
+                                                                <input type="text" placeholder="◯年" class="form-control">
+                                                                <input type="text" placeholder="◯年" class="form-control">
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <dl class="form-group form-group--full pd0-sp" >
+                                                        <dt class="form-group__label">得意とする分野・スキル</dt>
+                                                        <dd class="form-group__input">
+                                                            <textarea name="" id="" cols="30" rows="10" class="form-control form-control--textarea" placeholder="担当業務についてもうちょっと詳しく聞きましょう。リーダー/メンバーとしてクライアントとのやり取り経験あり"></textarea>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                            </dl>
+                                            <dl class="acc-skills">
+                                                <dt class="acc-skills__dt">OS・開発環境・ツール</dt>
+                                                <dd class="acc-skills__dd">
+                                                    
+                                                </dd>
+                                            </dl>
+                                            <dl class="acc-skills">
+                                                <dt class="acc-skills__dt">言語・フレームワーク</dt>
+                                                <dd class="acc-skills__dd">
+                                                    
+                                                </dd>
+                                            </dl>
+                                            <dl class="acc-skills">
+                                                <dt class="acc-skills__dt">DB</dt>
+                                                <dd class="acc-skills__dd">
+                                                    
+                                                </dd>
+                                            </dl>
+                                            <dl class="acc-skills">
+                                                <dt class="acc-skills__dt">機器</dt>
+                                                <dd class="acc-skills__dd">
+                                                    
+                                                </dd>
+                                            </dl>
+                                            <dl class="acc-skills">
+                                                <dt class="acc-skills__dt">その他ネットワーク、クラウド等</dt>
+                                                <dd class="acc-skills__dd">
+                                                    
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                    <dl class="register-form__dl">
+                                        <dt class="register-form__dt">職務経歴</dt>
+                                        <dd class="register-form__dd register-form__dd--jobs">
+                                            <div class="register-form__dd-wp form-grid">
+                                                <dl class="form-group form-group--full">
+                                                    <dt class="form-group__label">勤務先</dt>
+                                                    <dd class="form-group__input">
+                                                        <input type="text" placeholder="氏名を入力してください。" class="form-control">
+                                                    </dd>
+                                                </dl>
+                                                <dl class="form-group">
+                                                    <dt class="form-group__label"><span>*</span>勤務先</dt>
+                                                    <dd class="form-group__input">
+                                                        <input type="text" placeholder="いつから" class="form-control form-control--select" id="datepicker01">
+                                                    </dd>
+                                                </dl>
+                                                <dl class="form-group">
+                                                    <dt class="form-group__label"><span>*</span>終了日</dt>
+                                                    <dd class="form-group__input">
+                                                        <input type="text" placeholder="いつから" class="form-control form-control--select" id="datepicker02">
+                                                    </dd>
+                                                </dl>
+                                                <dl class="form-group">
+                                                    <dt class="form-group__label">資本金</dt>
+                                                    <dd class="form-group__input">
+                                                        <input type="text" class="form-control" placeholder="資本金を選択してください。">
+                                                    </dd>
+                                                </dl>
+                                                <dl class="form-group">
+                                                    <dt class="form-group__label">資本金</dt>
+                                                    <dd class="form-group__input">
+                                                        <input type="text" class="form-control" placeholder="従業員数を入力してください。">
+                                                    </dd>
+                                                </dl>
+                                                <div class="box-project">
+                                                    <a href="" class="box-project__close"><img src="../img/common/close-circle-red.png" alt="" width="24"></a>
+                                                    <div class="form-grid">
+                                                        <dl class="form-group form-group--full">
+                                                            <dt class="form-group__label">プロジェクト名</dt>
+                                                            <dd class="form-group__input">
+                                                                <input type="text" class="form-control" placeholder="プロジェクト名を入力してください。">
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="form-group">
+                                                            <dt class="form-group__label">開始</dt>
+                                                            <dd class="form-group__input">
+                                                                <input type="text" class="form-control" placeholder="Select time">
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="form-group">
+                                                            <dt class="form-group__label">終了</dt>
+                                                            <dd class="form-group__input">
+                                                                <input type="text" class="form-control" placeholder="Select time">
+                                                            </dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="project-business">
+                                                        <h3 class="project-business__ttl"><span>業務内容</span></h3>
+                                                        <dl class="form-group form-group--full form-group--styles02">
+                                                            <dt class="form-group__label"><span>*</span>プロジェクト内容</dt>
+                                                            <dd class="form-group__input">
+                                                                <img src="../img/common/editor-02.png" alt="プロジェクト内容">
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="form-group form-group--full">
+                                                            <dt class="form-group__label"><span>*</span>組織</dt>
+                                                            <dd class="form-group__input">
+                                                                <img src="../img/common/input-01.png" alt="プロジェクト内容">
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="form-group form-group--full">
+                                                            <dt class="form-group__label"><span>*</span>組織</dt>
+                                                            <dd class="form-group__input">
+                                                                <img src="../img/common/input-02.png" alt="プロジェクト内容">
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="form-group form-group--full">
+                                                            <dt class="form-group__label"><span>*</span>役割</dt>
+                                                            <dd class="form-group__input">
+                                                                <img src="../img/common/input-02.png" alt="プロジェクト内容">
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="form-group form-group--full">
+                                                            <dt class="form-group__label"><span>*</span>開発環境</dt>
+                                                            <dd class="form-group__input">
+                                                                <img src="../img/common/input-03.png" alt="プロジェクト内容">
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="form-group form-group--full">
+                                                            <dt class="form-group__label"><span>*</span>担当業務</dt>
+                                                            <dd class="form-group__input">
+                                                                <img src="../img/common/input-04.png" alt="担当業務">
+                                                            </dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn-add-project js-add-project">この会社のプロジェクを追加</a>
+                                            </div>
+                                            <div class="register-form__dd-wp form-grid project-content02">
+                                                <a href="" class="box-project__close"><img src="../img/common/close-circle-red.png" alt="" width="24"></a>
+                                                <dl class="form-group form-group--full">
+                                                    <dt class="form-group__label">勤務先</dt>
+                                                    <dd class="form-group__input">
+                                                        <input type="text" placeholder="氏名を入力してください。" class="form-control">
+                                                    </dd>
+                                                </dl>
+                                                <dl class="form-group">
+                                                    <dt class="form-group__label"><span>*</span>勤務先</dt>
+                                                    <dd class="form-group__input">
+                                                        <select name="" id="" class="form-control form-control--select">
+                                                            <option value="いつから">いつから</option>
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="form-group">
+                                                    <dt class="form-group__label"><span>*</span>終了日</dt>
+                                                    <dd class="form-group__input">
+                                                        <select name="" id="" class="form-control form-control--select">
+                                                            <option value="いつから">いつから</option>
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="form-group">
+                                                    <dt class="form-group__label">資本金</dt>
+                                                    <dd class="form-group__input">
+                                                        <input type="text" class="form-control" placeholder="資本金を選択してください。">
+                                                    </dd>
+                                                </dl>
+                                                <dl class="form-group">
+                                                    <dt class="form-group__label">資本金</dt>
+                                                    <dd class="form-group__input">
+                                                        <input type="text" class="form-control" placeholder="従業員数を入力してください。">
+                                                    </dd>
+                                                </dl>
+                                                <a href="" class="btn-add-project mt0">この会社のプロジェクを追加</a>
+                                            </div>
+                                            <button class="btn-submit-project js-add-project02">この会社のプロジェクを追加</button>
+                                        </dd>
+                                    </dl>
+                                    <dl class="register-form__dl">
+                                        <dt class="register-form__dt">資格</dt>
+                                        <dd class="register-form__dd">
+                                            <div class="box-qualifications">
+                                                <div class="form-grid">
+                                                    <dl class="form-group">
+                                                        <dt class="form-group__label">資格証明書</dt>
+                                                        <dd class="form-group__input">
+                                                            <a href="" class="txt-link js-qualifications" data-id="id01">参考</a>
+                                                            <input type="text" class="form-control" placeholder="基本情報技術者" id="id01">
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="form-group">
+                                                        <dt class="form-group__label">取得日</dt>
+                                                        <dd class="form-group__input">
+                                                            <a href="" class="txt-link">参考</a>
+                                                            <input type="text" placeholder="2021年06月" class="form-control form-control--date">
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="form-grid form-grid--styles02">
+                                                    <dl class="form-group">
+                                                        <dt class="form-group__label">資格証明書</dt>
+                                                        <dd class="form-group__input">
+                                                            <a href="" class="txt-link js-qualifications" data-id="id02">参考</a>
+                                                            <input type="text" class="form-control" placeholder="基本情報技術者" id="id02">
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="form-group">
+                                                        <dt class="form-group__label">取得日</dt>
+                                                        <dd class="form-group__input">
+                                                            <input type="text" placeholder="2021年06月" class="form-control form-control--date">
+                                                        </dd>
+                                                    </dl>
+                                                    <a href="" class="box-project__close"><img src="../img/common/close-circle-red.png" alt="" width="24"></a>
+                                                </div>
+                                                <a href="" class="btn-submit-project js-add-qualifications">追加</a>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="register-form__dl">
+                                        <dt class="register-form__dt">自己PR</dt>
+                                        <dd class="register-form__dd">
+                                            <img src="../img/common/editor-03.png" alt="得意とする分野・スキル">
+                                        </dd>
+                                    </dl>
+                                    <div class="register-form__status">
+                                        <p class="register-form__status-label">Trạng thái</p>
+                                        <label class="c-switch">
+                                            <input type="checkbox" checked />
+                                            <div>Public</div>
+                                        </label>
+                                    </div>
+                                    <div class="register-form__btn-group">
+                                        <button class="c-btn__01 c-btn__01--gray js-cancel">Hủy bỏ</button>
+                                        <button class="c-btn__01">Lưu lại</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    
+                    <div class="c-modal c-modal--engineer" id="register-skill">
+                        <div class="c-modal__wp">
+                            <div class="c-modal__fillter">
+                                <h3 class="c-modal__fillter-ttl">得意とする分野・スキル</h3>
+                                <span class="c-modal__fillter-close js-cancel"><img src="../img/common/x-close.png" alt="Close" width="24"></span>
+                                <div class="c-modal__fillter-flex pc">
+                                    <div class="col-type">
+                                        <h2 class="c-ttl__04">TYPE</h2>
+                                        <div class="col-type__wp">
+                                            <ul class="c-tabs js-tabs">
+                                                <li class="is-active"><a href="#" data-tab="tab01">サーバ<span class="qty">(1)</span></a></li>
+                                                <li><a href="#" data-tab="tab02">言語・フレームワーク</a></li>
+                                                <li><a href="#" data-tab="tab03">ネイティブアプリ</a></li>
+                                                <li><a href="#" data-tab="tab04">ネットワーク</a></li>
+                                                <li><a href="#" data-tab="tab04">フロントエンド</a></li>
+                                                <li><a href="#" data-tab="tab04">社内SE</a></li>
+                                                <li><a href="#" data-tab="tab04">Webデザイナー・フロントエンド</a></li>
+                                                <li><a href="#" data-tab="tab04">ゲームプロデューサー・CGデザイナー系_サンプル</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-hint">
+                                        <h2 class="c-ttl__04">HINT</h2>
+                                        <div class="col-hint___wp">
+                                            <div class="tabs-content tabs-content--selected current " id="tab01">
+                                                <label>
+                                                    <input type="radio" class="form-checbox" value="(Windows/Linux)サーバの(要件定義/基本設計/詳細設計/構築/設定/運用保守/維持管理)" name="サーバ">
+                                                    <span class="txt-checkbox">・(Windows/Linux)サーバの(要件定義/基本設計/詳細設計/構築/設定/運用保守/維持管理)</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" class="form-checbox" value="・(Vsphere/Hyper-V)などの仮想サーバの(設計/構築)" name="サーバ">
+                                                    <span class="txt-checkbox">・(Vsphere/Hyper-V)などの仮想サーバの(設計/構築)</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" class="form-checbox" value="・DB設計・構築" name="サーバ">
+                                                    <span class="txt-checkbox">・DB設計・構築</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" class="form-checbox" value="・ネットワーク機器(Cisco/Juniper)の(設計/構築/運用保守)経験" name="サーバ">
+                                                    <span class="txt-checkbox">・ネットワーク機器(Cisco/Juniper)の(設計/構築/運用保守)経験</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" class="form-checbox" value="・製品ベンダとの仕様調整及び調達価格交渉" name="サーバ">
+                                                    <span class="txt-checkbox">・製品ベンダとの仕様調整及び調達価格交渉</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" class="form-checbox" value="(Windows/Linux)サーバの(要件定義/基本設計/詳細設計/構築/設定/運用保守/維持管理)" name="サーバ">
+                                                    <span class="txt-checkbox">・(Windows/Linux)サーバの(要件定義/基本設計/詳細設計/構築/設定/運用保守/維持管理)</span>
+                                                </label>
+                                            </div>
+                                            <div class="tabs-content" id="tab02">
+                                                
+                                            </div>
+                                            <div class="tabs-content" id="tab03">
+                                                
+                                            </div>
+                                            <div class="tabs-content" id="tab04">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-modal__filltersp sp">
+                                    <dl class="fillter-acc">
+                                        <dt class="fillter-acc__label">担当業務</dt>
+                                        <dd class="fillter-acc__content tabs-content tabs-content--selected">
+                                            <label>
+                                                <input type="radio" class="form-checbox" value="(Windows/Linux)サーバの(要件定義/基本設計/詳細設計/構築/設定/運用保守/維持管理)" name="サーバ">
+                                                <span class="txt-checkbox">・(Windows/Linux)サーバの(要件定義/基本設計/詳細設計/構築/設定/運用保守/維持管理)</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" class="form-checbox" value="・(Vsphere/Hyper-V)などの仮想サーバの(設計/構築)" name="サーバ">
+                                                <span class="txt-checkbox">・(Vsphere/Hyper-V)などの仮想サーバの(設計/構築)</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" class="form-checbox" value="・DB設計・構築" name="サーバ">
+                                                <span class="txt-checkbox">・DB設計・構築</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" class="form-checbox" value="・ネットワーク機器(Cisco/Juniper)の(設計/構築/運用保守)経験" name="サーバ">
+                                                <span class="txt-checkbox">・ネットワーク機器(Cisco/Juniper)の(設計/構築/運用保守)経験</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" class="form-checbox" value="・製品ベンダとの仕様調整及び調達価格交渉" name="サーバ">
+                                                <span class="txt-checkbox">・製品ベンダとの仕様調整及び調達価格交渉</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" class="form-checbox" value="(Windows/Linux)サーバの(要件定義/基本設計/詳細設計/構築/設定/運用保守/維持管理)" name="サーバ">
+                                                <span class="txt-checkbox">・(Windows/Linux)サーバの(要件定義/基本設計/詳細設計/構築/設定/運用保守/維持管理)</span>
+                                            </label>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fillter-acc">
+                                        <dt class="fillter-acc__label">担当業務</dt>
+                                        <dd class="fillter-acc__content tabs-content tabs-content--selected">
+                                            
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="c-modal__control">
+                                    <button class="c-modal__submit c-modal__submit--gray js-cancel">キャンセル</button>
+                                    <a href="" class="c-modal__submit js-submit-skills">検索</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="c-modal c-modal--engineer" id="qualifications">
+                        <div class="c-modal__wp">
+                            <div class="c-modal__fillter">
+                                <h3 class="c-modal__fillter-ttl">資格</h3>
+                                <span class="c-modal__fillter-close"><img src="../img/common/x-close.png" alt="Close" width="24"></span>
+                                <div class="qualifications-content">
+                                    <div class="qualifications-content__wp">
+                                        <label>
+                                            <input type="radio" class="form-checbox" value="資格1" name="qualifications">
+                                            <span class="txt-checkbox">資格1</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" class="form-checbox" value="資格2" name="qualifications">
+                                            <span class="txt-checkbox">資格2</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" class="form-checbox" value="資格3" name="qualifications">
+                                            <span class="txt-checkbox">資格3</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" class="form-checbox" value="資格4" name="qualifications">
+                                            <span class="txt-checkbox">資格4</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" class="form-checbox" value="資格5" name="qualifications">
+                                            <span class="txt-checkbox">資格5</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" class="form-checbox" value="資格6" name="qualifications">
+                                            <span class="txt-checkbox">資格6</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" class="form-checbox" value="資格7" name="qualifications">
+                                            <span class="txt-checkbox">資格7</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" class="form-checbox" value="資格8" name="qualifications">
+                                            <span class="txt-checkbox">資格8</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" class="form-checbox" value="資格9" name="qualifications">
+                                            <span class="txt-checkbox">資格9</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" class="form-checbox" value="資格10" name="qualifications">
+                                            <span class="txt-checkbox">資格10</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="c-modal__control">
+                                    <button class="c-modal__submit c-modal__submit--gray js-cancel">キャンセル</button>
+                                    <a href="" class="c-modal__submit js-submit-qualifications">検索</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+

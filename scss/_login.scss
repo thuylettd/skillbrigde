@@ -1,0 +1,109 @@
+@use 'vars' as *;
+
+.page-login{
+    background: url(../img/login/bg-login.png) no-repeat center/cover;
+    min-height: 100vh;
+    @include flex(center, center);
+    &__wp{
+        max-width: 1378px;
+        width: 100%;
+        @include flex(between, center);
+    }
+    &__logo{
+        width: 50%;
+    }
+    &__form{
+        width: 37.74%;
+        background: url(../img/login/bg-form.png) no-repeat center/cover;
+        border-radius: 16px;
+        overflow: hidden;
+        padding: 40px 50px;
+        &-ttl{
+            @include font-size(48);
+            font-family: $font-Averta-Bold;
+            margin-bottom: 32px;
+        }
+        &-field{
+            margin-bottom: 20px;
+            &:last-of-type{
+                margin-bottom: 58px;
+            }
+        }
+        &-label{
+            @include font-size(14);
+            font-family: $font-Averta-Semibold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        &-input{
+            position: relative;
+            .toggle-pass{
+                width: 20px;
+                height: 20px;
+                display: block;
+                background: url(../img/common/ico-eye.png) no-repeat center/100%;
+                top: 17px;
+                right: 17px;
+                position: absolute;
+                z-index: 2;
+                cursor: pointer;
+            }
+           
+        }
+    }
+}
+
+.switch-language{
+    position: absolute;
+    top: 29px;
+    right: 100px;
+    @include font-size(16);
+    &__label{
+        @include flex(center, center);
+        font-family: $font-Averta-Semibold;
+        position: relative;
+        cursor: pointer;
+        @include fn-hover;
+        @include p-after(20px, 20px){
+            background: url(../img/common/chevron-up.png) no-repeat center/100%;
+            position: relative;
+            margin-left: 10px;
+            transform: rotate(180deg);
+        }
+        img{
+            margin-right: 8px;
+            width: 24px;
+        }
+        &.is-show{
+            &:after{
+                transform: rotate(0);
+            }
+        }
+    }
+    &__list{
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        padding: 8px;
+        border-radius: 8px;
+        background: #fff;
+        z-index: 10;
+        display: none;
+        li{
+            height: 38px;
+            @include flex(0, center);
+            margin-bottom: 8px;
+            padding: 0 16px;
+            img{
+                margin-right: 8px;
+            }
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,324 @@
+<div class="cms-main">
+	<%- include('common/_sidebar'); %>
+	<div class="cms-content">
+		<%- include('common/_header'); %>
+		<div class="manpower-page">
+			<div class="manpower-page__control">
+				<ul class="manpower-page__search">
+					<li class="manpower-page__search-field manpower-page__search-field--company-name">
+						<input type="text" class="form-control" placeholder="Tên công ty">
+					</li>
+					<li class="manpower-page__search-field manpower-page__search-field--status">
+						<select name="" id="" class="form-control form-control--select">
+							<option value="">Trạng thái</option>
+							<option value="">--</option>
+							<option value="">--</option>
+						</select>
+					</li>
+				</ul>
+				<a href="#" class="c-btn__01 c-btn__01--add js-show-modal" data-modal="add-company">Tạo mới</a>
+			</div>
+			<div class="manpower-page__wp">
+				<div class="c-table">
+					<table>
+						<tr>
+							<th>STT</th>
+							<th>Mã công ty</th>
+							<th>Tên</th>
+							<th>Người đại diện</th>
+							<th>Email</th>
+							<th>Ứng viên quan tâm</th>
+							<th>Thời gian tạo <button class="btn-sort"><img src="../img/common/ico-sort.png" width="16" alt=""></button></th>
+							<th>Trạng thái</th>
+							<th>Hành động</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status">Đang hoạt động</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status label-status--warning">Đăng ký bước 1</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status label-status--warning">Đăng ký bước 1</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status label-status--danger">Ngừng hoạt động</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status">Đang hoạt động</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status">Đang hoạt động</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status">Đang hoạt động</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status">Đang hoạt động</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status">Đang hoạt động</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status">Đang hoạt động</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="#" class="txt-link">CT000223</a></td>
+							<td>The Walt Disney Company</td>
+							<td>Yuuto Nakamura</td>
+							<td>companyname@gmail.com</td>
+							<td>16</td>
+							<td>01/01/2022 12:21</td>
+							<td>
+								<span class="label-status">Đang hoạt động</span>
+							</td>
+							<td>
+								<button class="btn-action"></button>
+								<ul class="action-content">
+									<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+									<li class="action-content__delete"><a href="#">Xoá</a></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="area-footer manpower-page__footer">
+				<div class="manpower-page__left">Có <strong>150</strong> kết quả</div>
+				<div class="manpower-page__right">
+					<ul class="manpower-page__pagination">
+						<li class="page-prev"><a href="#"></a></li>
+						<li class="page current"><a href="#">1</a></li>
+						<li class="page"><a href="#">2</a></li>
+						<li class="page"><a href="#">3</a></li>
+						<li class="extend"><span></span></li>
+						<li class="page"><a href="#">10</a></li>
+						<li class="page-next"><a href="#"></a></li>
+					</ul>
+					<div class="manpower-page__postperpage">
+						<select name="" id="" class="form-control form-control--select">
+							<option value="5">5 / trang</option>
+							<option value="10">10 / trang</option>
+							<option value="15">15 / trang</option>
+							<option value="20">20 / trang</option>
+							<option value="25">25 / trang</option>
+						</select>
+					</div>
+					<div class="manpower-page__goto">Đi đến trang <input type="text" class="form-control form-control--sm"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="c-modal create-company" id="add-company">
+	<div class="c-modal__wp">
+		<form action="" method="post" class="c-modal__form">
+			<h3 class="c-modal__ttl">Thêm mới công ty Nhật</h3>
+			<div class="create-company__wp">
+				<dl class="create-company__field create-company__field--full">
+					<dt class="create-company__field-label"><span>*</span>Tên công ty</dt>
+					<dd class="create-company__field-input">
+						<input type="text" class="form-control error02" placeholder="Nhập tên công ty">
+						<span class="error _types02">Tên công ty không được để trống</span>
+					</dd>
+				</dl>
+				<dl class="create-company__field">
+					<dt class="create-company__field-label"><span>*</span>Email</dt>
+					<dd class="create-company__field-input">
+						<input type="text" class="form-control" placeholder="Nhập email">
+					</dd>
+				</dl>
+				<dl class="create-company__field">
+					<dt class="create-company__field-label">Số điện thoại</dt>
+					<dd class="create-company__field-input">
+						<input type="text" class="form-control" placeholder="Nhập số điện thoại">
+					</dd>
+				</dl>
+				<div class="representative-box">
+					<p class="representative-box__label">Người đại diện 1</p>
+					<div class="representative-box__field">
+						<dl class="representative-box__dl">
+							<dt class="representative-box__dt">Tên người đại diện</dt>
+							<dd class="representative-box__dd"><input type="text" class="form-control" value="Hoàng Thị Yến" placeholder="Nhập tên người đại diện"></dd>
+						</dl>
+						<dl class="representative-box__dl">
+							<dt class="representative-box__dt">Phương thức liên lạc</dt>
+							<dd class="representative-box__dd"><input type="text" class="form-control" value="0985859543" placeholder="Nhập phương thức liên lạc"></dd>
+						</dl>
+						<dl class="representative-box__dl">
+							<dt class="representative-box__dt">Chức danh</dt>
+							<dd class="representative-box__dd"><input type="text" class="form-control" value="Giám đốc" placeholder="Nhập chức danh"></dd>
+						</dl>
+					</div>
+				</div>
+				<button class="c-txt__add js-add-person">Thêm người đại diện</button>
+			</div>
+			<div class="c-modal__control">
+				<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+				<a href="#" class="c-btn__01">Thêm mới</a>
+			</div>
+		</form>
+	</div>
+</div>

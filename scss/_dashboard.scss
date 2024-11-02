@@ -1,0 +1,108 @@
+@use 'vars' as *;
+
+.dashboard-content{
+	padding: 24px 30px;
+	&__top{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		box-shadow: 0px 0px 30px 15px rgba(#1A3168, .11);
+		gap: 0 30px;
+		padding: 16px 24px;
+		margin-bottom: 27px;
+		&-item{
+			@include flex(0, center);
+			border-right: 1px dashed #E6E8EC;
+			&:last-of-type{
+				border-right: none;
+			}
+			.icon{
+				width: 60px;
+			}
+		}
+		&-title{
+			width: calc(100% - 60px);
+			padding-left: 16px;
+			.txt{
+				@include font-size(16);
+				font-family: $font-Averta-Semibold;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.number{
+				@include font-size(24);
+				font-weight: 700;
+			}
+		}
+	}
+
+	&__chartjs{
+		background: #fff;
+		padding: 10px 20px;
+		&-heading{
+			@include flex(between, center);
+			margin-bottom: 15px;
+		}
+		&-ttl{
+			@include font-size(18);
+			font-weight: 700;
+		}
+		&-datepicker{
+			gap: 0 27px;
+			@include flex(between, center);
+			li{
+				width: 160px;
+				position: relative;
+				&:last-of-type{
+					&:after{
+						display: none;
+					}
+				}
+				&:after{
+					content: "-";
+					display: inline-block;
+					top: 15px;
+					right: -17px;
+					@include font-size(16);
+					font-weight: 600;
+					position: absolute;
+				}
+				&::before{
+					content: "";
+					display: block;
+					width: 20px;
+					height: 20px;
+					background: #F1F4F9 url(../img/common/calendar-2.png) no-repeat center/100%;
+					top: 18px;
+					right: 16px;
+					position: absolute;
+				}
+				.form-control{
+					background: #F1F4F9;
+				}
+			}
+		}
+		&-tabs{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			border-bottom: none;
+			li{
+				padding: 0;
+				text-align: center;
+				border: none !important;
+				span{
+					display: inline-block;
+					@include font-size(16);
+					font-weight: 600;
+					color: #94A3B8;
+					padding-bottom: 5px;
+				}
+				&.is-active{
+					span{
+						border-bottom: 2px solid;
+						color: #497CFF;
+					}
+				}
+			}
+		}
+	}
+}

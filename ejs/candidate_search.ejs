@@ -1,0 +1,200 @@
+<div class="cms-main">
+	<%- include('common/_sidebar'); %>
+	<div class="cms-content">
+		<%- include('common/_header'); %>
+		<div class="candidate-page">
+			<div class="candidate-heading">
+				<ul class="candidate-heading__tabs c-tabs">
+					<li data-tab="approved" class="is-active">Đã được duyệt</li>
+					<li data-tab="waiting-approval">Chờ duyệt (5)</li>
+				</ul>
+				<div class="candidate-heading__dropdown">
+					<a href="#" class="c-btn__01 c-btn__01--dropdown js-dropdown">Tạo mới</a>
+					<ul class="c-dropdown">
+						<li><a href="#"><img src="../img/candidate/user.png" alt="" width="20">Cá nhân</a></li>
+						<li><a href="#"><img src="../img/candidate/building-4.png" alt="" width="20">Công ty</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="candidate-page__control">
+				<ul class="candidate-page__search">
+					<li class="candidate-page__search-field candidate-page__search-field--keyword">
+						<input type="text" class="form-control" placeholder="Tìm kiếm">
+					</li>
+					<li class="candidate-page__search-field candidate-page__search-field--exp">
+						<select name="" id="" class="form-control form-control--select">
+							<option value="">Kinh nghiệm</option>
+							<option value="">--</option>
+							<option value="">--</option>
+						</select>
+					</li>
+					<li class="candidate-page__search-field candidate-page__search-field--wish">
+						<span class="form-control form-control--select js-dropdown">Nguyện vọng</span>
+						<ul class="c-dropdown">
+							<li><a href="#">Có</a></li>
+							<li><a href="#">Không</a></li>
+							<li><a href="#">Xem xét</a></li>
+						</ul>
+					</li>
+					<li class="candidate-page__search-field candidate-page__search-field--status">
+						<select name="" id="" class="form-control form-control--select">
+							<option value="">Trạng thái</option>
+							<option value="">--</option>
+							<option value="">--</option>
+						</select>
+					</li>
+					<li class="candidate-page__search-field candidate-page__search-field--object">
+						<select name="" id="" class="form-control form-control--select">
+							<option value="">Đối tượng</option>
+							<option value="">--</option>
+							<option value="">--</option>
+						</select>
+					</li>
+					<li class="candidate-page__search-field candidate-page__search-field--filter-advended js-show-modal" data-modal="fillter">
+						<input type="text" class="form-control" placeholder="Tìm kiếm nâng cao">
+					</li>
+				</ul>
+			</div>
+			<div class="tabs-content current" id="approved">
+				<div class="cms-wrapper">
+					<%- include('table/_table_candidate.ejs'); %>
+				</div>
+				<%- include('common/_area_footer.ejs'); %>
+			</div>
+			<div class="tabs-content" id="waiting-approval">
+				<div class="cms-wrapper">
+					<%- include('table/_table_candidate_02.ejs'); %>
+				</div>
+				<%- include('common/_area_footer.ejs'); %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="c-modal c-modal--engineer" id="fillter">
+	<div class="c-modal__wp">
+		<form action="" method="post" class="c-modal__fillter">
+			<h3 class="c-modal__fillter-ttl">得意とする分野・スキル</h3>
+			<span class="c-modal__fillter-close js-cancel"><img src="../img/common/x-close.png" alt="Close" width="24"></span>
+			<div class="c-modal__fillter-flex">
+				<div class="col-type">
+					<h2 class="c-ttl__04">TYPE</h2>
+					<div class="col-type__wp">
+						<ul class="c-tabs02 js-tabs">
+							<li class="is-active"><a href="#" data-tab="tab01">担当業務<span class="qty">(1)</span></a></li>
+							<li><a href="#" data-tab="tab02">言語・フレームワーク</a></li>
+							<li><a href="#" data-tab="tab03">DB (2)</a></li>
+							<li><a href="#" data-tab="tab04">その他ネットワーク、クラウド等</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-hint">
+					<h2 class="c-ttl__04">HINT</h2>
+					<div class="col-hint___wp">
+						<div class="tabs-content current" id="tab01">
+							<ul class="list-skills">
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="企画">
+										<span class="txt-checkbox"><span>企画</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="要件定義">
+										<span class="txt-checkbox"><span>要件定義</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="デザイン">
+										<span class="txt-checkbox"><span>デザイン</span></span>
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="tabs-content" id="tab02">
+							<ul class="list-skills">
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="詳細設計">
+										<span class="txt-checkbox"><span>詳細設計</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="構築、設定">
+										<span class="txt-checkbox"><span>構築、設定</span></span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="ヘルプデスク">
+										<span class="txt-checkbox"><span>ヘルプデスク</span></span>
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="tabs-content" id="tab03">
+							<ul class="list-skills">
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="企画">
+										<span class="txt-checkbox">企画</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="要件定義">
+										<span class="txt-checkbox">要件定義</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="デザイン">
+										<span class="txt-checkbox">デザイン</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="tabs-content" id="tab04">
+							<ul class="list-skills">
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="企画">
+										<span class="txt-checkbox">企画</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="要件定義">
+										<span class="txt-checkbox">要件定義</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" class="form-checbox" value="デザイン">
+										<span class="txt-checkbox">デザイン</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-selected">
+				<div class="box-selected__heading">
+					<h3 class="c-ttl__04">SELECTED<span class="qty">(0)</span></h3>
+					<button class="txt-delete-all">全て削除</button>
+				</div>
+				<ul class="box-selected__result">
+					
+				</ul>
+			</div>
+			<div class="c-modal__control">
+				<button class="c-modal__submit c-modal__submit--gray js-cancel">キャンセル</button>
+				<a href="#" class="c-modal__submit js-submit-skills">検索</a>
+			</div>
+		</form>
+	</div>
+</div>
