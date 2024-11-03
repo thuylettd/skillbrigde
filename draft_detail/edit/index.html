@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=1920">
+		<title>Quản lý doanh nghiệp</title>
+		<meta name="description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" href="../../favicon.ico">
+		<link type="text/css" rel="stylesheet" href="../../css/styles.css">
+	</head>
+	<body>
+		<main id="page-draft_detail_edit" class="wrapper">
+			<div class="cms-main">
+				<div class="cms-sidebar">
+					<h1 class="cms-sidebar__logo"><a href="#"><img src="../../img/common/logo.png" alt=""></a></h1>
+					<ul class="cms-sidebar__nav">
+						<li class="cms-sidebar__nav-item"><a href="/dashboard/">Dashboard</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/company_manager/">Quản lý doanh nghiệp</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/manpower/">Công ty Nhật cần người</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/manpower_02/">Công ty cung ứng nhân lực</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/candidate/">Danh sách ứng viên</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/faq/">Câu hỏi thường gặp</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/recruitment/">Quản lý template</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/contact/">Quản lý Contact Us</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/master_data/">Master data</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/system/">Cài đặt hệ thống</a></li>
+					</ul>
+				</div>
+				<div class="cms-content">
+					<div class="cms-heading">
+						<h2 class="cms-heading__ttl">Quản lý doanh nghiệp</h2>
+						<ul class="cms-heading__control">
+							<li class="cms-heading__control-notification"><a href="#"><img src="../../img/common/icon-notification.png" alt="" width="40"></a></li>
+							<li class="cms-heading__control-notification"><a href="#"><img src="../../img/common/vn.png" alt="" width="24"></a></li>
+							<li class="cms-heading__control-user">
+								<a href="#" class="wp js-dropdown">
+									<div class="cms-heading__control-avatar">
+										<img src="../../img/common/avatar.png" alt="">
+									</div>
+									<div class="cms-heading__control-info">
+										<span class="namme">Quản Trị Viên</span>
+										<span class="position">Super Admintrator</span>
+									</div>
+								</a>
+								<ul class="c-dropdown">
+									<li><a href="#" class="js-show-modal" data-modal="changepass"><img src="../../img/common/ico-changepass.png" width="20" alt="">Đổi mật khẩu</a></li>
+									<li><a href="#" class="js-show-modal" data-modal="register"><img src="../../img/common/password-check.png" width="20" alt="">Cấp lại mật khẩu</a></li>
+									<li><a href="#" class="js-show-modal" data-modal="form-logout"><img src="../../img/common/logout.png" width="20" alt="">Đăng xuất</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="company-detail">
+						<div class="area-control company-detail__control">
+							<div class="breadcrumb">
+								<a href="/company_manager/">Quản lý doanh nghiệp</a>
+								<a href="/draft_detail/">Chi tiết doanh nghiệp</a>
+								<span>Chỉnh sửa doanh nghiệp</span>
+							</div>
+							<div class="btn-group btn-group--styles02">
+								<a href="/draft_detail/" class="c-btn__01 c-btn__01--gray">Hủy bỏ</a>
+								<a href="#" class="c-btn__01 c-btn__01--blue">Public</a>
+								<a href="#" class="c-btn__01">Lưu lại</a>
+							</div>
+						</div>
+						<div class="cms-wrapper is-edit-page">
+							<div class="c-layout company-detail__wp">
+								<div class="c-layout__left">
+									<h2 class="c-ttl__01">THÔNG TIN DOANH NGHIỆP</h2>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Tên doanh nghiệp</dt>
+										<dd class="company-detail__field-text">
+											<input type="text" placeholder="Nhập tên công ty" class="form-control error02">
+											<span class="error _types02">Tên doanh nghiệp không được để trống</span>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Người đại diện pháp luật</dt>
+										<dd class="company-detail__field-text">
+											<input type="text" placeholder="Nhập thông tin người đại diện pháp luật" class="form-control">
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Tên và cách thức người đảm nhận liên lạc</dt>
+										<dd class="company-detail__field-text">
+											<div class="contact-person">
+												<div class="contact-person__field contact-person__field--default">
+													<input type="text" class="form-control" value="Full Name A">
+													<textarea name="" id="" class="form-control form-control--textarea" placeholder="Cách liên lạc với người đảm nhận quan hệ 1 -1"></textarea>
+												</div>
+												<div class="contact-person__field contact-person__field--added">
+													<input type="text" class="form-control" value="Full Name A">
+													<textarea name="" id="" class="form-control form-control--textarea" placeholder="Cách liên lạc với người đảm nhận quan hệ 1 -1"></textarea>
+													<button class="contact-person__field-delete"></button>
+												</div>
+												<button class="c-txt__add c-txt__add--sm js-add-contact-person">Thêm người</button>
+											</div>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">
+											<span class="required">*</span>Loại hình công ty <button class="c-txt__add js-show-modal" data-modal="add-type-company">Thêm</button>
+										</dt>
+										<dd class="company-detail__field-text">
+											<div class="multiSelect type-company">
+												<select multiple="multiple" class="multiSelect_field" data-placeholder="Thêm loại hình công ty">
+													<option value="PHP">PHP</option>
+													<option value="Java">Java</option>
+													<option value="Nodejs">Nodejs</option>
+													<option value="HTML">JavaScript</option>
+													<option value="CSS">C#</option>
+													<option value="CSS">C++</option>
+													<option value="CSS">Software Engineer</option>
+													<option value="PHP">PHP</option>
+													<option value="Java">Java</option>
+													<option value="Nodejs">Nodejs</option>
+													<option value="HTML">JavaScript</option>
+													<option value="CSS">C#</option>
+													<option value="CSS">C++</option>
+													<option value="CSS">Software Engineer</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">
+											<span class="required">*</span>Loại hình công ty detail <button class="c-txt__add js-show-modal" data-modal="add-type-company-detail">Thêm</button>
+										</dt>
+										<dd class="company-detail__field-text">
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Quy mô công ty</dt>
+										<dd class="company-detail__field-text">
+											<select name="" id="" class="form-control form-control--select error03">
+												<option value="">Chọn</option>
+												<option value="">--</option>
+												<option value="">--</option>
+											</select>
+											<span class="error _types03">Thông tin này cần thiết để tăng chất lượng dịch vụ</span>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label"><span class="required">*</span>Địa chỉ công ty</dt>
+										<dd class="company-detail__field-text">
+											<div class="company-address company-address--first">
+												<span class="company-address__label">Địa chỉ 1</span>
+												<ul class="company-address__form">
+													<li class="company-address__input">
+														<select name="" id="" class="form-control form-control--select">
+															<option value="Việt Nam">Việt Nam</option>
+															<option value="">--</option>
+															<option value="">--</option>
+														</select>
+													</li>
+													<li class="company-address__input">
+														<select name="" id="" class="form-control form-control--select">
+															<option value="Hà Nội">Hà Nội</option>
+															<option value="">--</option>
+															<option value="">--</option>
+														</select>
+													</li>
+													<li class="company-address__input">
+														<select name="" id="" class="form-control form-control--select error02">
+															<option value="">Quận</option>
+															<option value="">--</option>
+															<option value="">--</option>
+														</select>
+													</li>
+													<li class="company-address__input">
+														<select name="" id="" class="form-control form-control--select error02">
+															<option value="">Huyện</option>
+															<option value="">--</option>
+															<option value="">--</option>
+														</select>
+													</li>
+													<li class="company-address__input">
+														<input type="text" class="form-control error02" placeholder="Địa chỉ cụ thể">
+													</li>
+												</ul>
+												<div class="company-address__iframe">
+													<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.016182577622!2d105.78065977587246!3d21.03203848766467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abfe95ba0d93%3A0x8ab9e245cb41e1f0!2zVMOyYSBuaMOgIEtpbSDDgW5o!5e0!3m2!1svi!2s!4v1730647610721!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+												</div>
+											</div>
+											<button class="c-txt__add c-txt__add--sm js-add-address">Thêm địa chỉ</button>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Khái lược về doanh nghiệp</dt>
+										<dd class="company-detail__field-text">
+											<div class="ckeditor-area">
+												<img src="../../img/enterprice/editor.png" alt="">
+											</div>
+											<span class="error _types03">Thông tin này cần thiết để tăng chất lượng dịch vụ</span>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">
+											<span class="required">*</span>Kỹ năng chính: <button class="c-txt__add js-show-modal" data-modal="add-skills">Thêm</button>
+										</dt>
+										<dd class="company-detail__field-text">
+											<div class="multiSelect select-skills">
+												<select multiple="multiple" class="multiSelect_field" data-placeholder="Thêm kỹ năng chính">
+													<option value="PHP">PHP</option>
+													<option value="Java">Java</option>
+													<option value="Nodejs">Nodejs</option>
+													<option value="HTML">JavaScript</option>
+													<option value="CSS">C#</option>
+													<option value="CSS">C++</option>
+													<option value="CSS">Software Engineer</option>
+													<option value="PHP">PHP</option>
+													<option value="Java">Java</option>
+													<option value="Nodejs">Nodejs</option>
+													<option value="HTML">JavaScript</option>
+													<option value="CSS">C#</option>
+													<option value="CSS">C++</option>
+													<option value="CSS">Software Engineer</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">
+											<span class="required">*</span>Bổ sung mô tả về kỹ năng <button class="c-txt__add">Thêm</button>
+										</dt>
+										<dd class="company-detail__field-text">
+											<textarea name="" id="" class="form-control form-control--textarea error03" placeholder="Nhập mô tả"></textarea>
+											<span class="error _types03">Thông tin này cần thiết để tăng chất lượng dịch vụ</span>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label"> Thế mạnh về domain nghiệp vụ: <button class="c-txt__add js-show-modal" data-modal="add-domain">Thêm</button>
+										</dt>
+										<dd class="company-detail__field-text">
+											<div class="multiSelect domain-skills">
+												<select multiple="multiple" class="multiSelect_field" data-placeholder="Thêm thế mạnh domain">
+													<option value="PHP">PHP</option>
+													<option value="Java">Java</option>
+													<option value="Nodejs">Nodejs</option>
+													<option value="HTML">JavaScript</option>
+													<option value="CSS">C#</option>
+													<option value="CSS">C++</option>
+													<option value="CSS">Software Engineer</option>
+													<option value="PHP">PHP</option>
+													<option value="Java">Java</option>
+													<option value="Nodejs">Nodejs</option>
+													<option value="HTML">JavaScript</option>
+													<option value="CSS">C#</option>
+													<option value="CSS">C++</option>
+													<option value="CSS">Software Engineer</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Note</dt>
+										<dd class="company-detail__field-text">
+											<img src="../../img/enterprice/editor.png" alt="">
+										</dd>
+									</dl>
+								</div>
+								<div class="c-layout__right disabled-fill">
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title"> HÌNH ẢNH VỀ CÔNG TY (PC) <div class="btn-upload"> Tải lên <input type="file" class="upload-multile-file" data-img="image-company" name="files[]" multiple="multiple">
+											</div>
+										</dt>
+										<dd class="company-gallery__content">
+											<span class="error _types03">Thông tin này cần thiết để tăng chất lượng dịch vụ</span>
+											<ul class="company-gallery__list" id="image-company"></ul>
+										</dd>
+									</dl>
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title"> HÌNH ẢNH VỀ CÔNG TY (SP) <div class="btn-upload"> Tải lên <input type="file" class="upload-multile-file" data-img="image-company-02" name="files[]" multiple="multiple">
+											</div>
+										</dt>
+										<dd class="company-gallery__content">
+											<span class="error _types03">Thông tin này cần thiết để tăng chất lượng dịch vụ</span>
+											<ul class="company-gallery__list" id="image-company-02"></ul>
+										</dd>
+									</dl>
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title">KHÁCH HÀNG ĐÃ VÀ ĐANG LÀM VIỆC <div class="btn-upload"> Tải lên <input type="file" class="upload-multile-file" data-img="image-company-03" name="files[]" multiple="multiple">
+											</div>
+										</dt>
+										<dd class="company-gallery__content">
+											<span class="error _types03">Thông tin này cần thiết để tăng chất lượng dịch vụ</span>
+											<div class="company-gallery__box">
+												<h3 class="company-gallery__box-ttl">Ảnh PC</h3>
+												<ul class="company-gallery__list company-gallery__list--02" id="image-company-03">
+												</ul>
+											</div>
+											<div class="company-gallery__box">
+												<h3 class="company-gallery__box-ttl">Ảnh SP</h3>
+												<ul class="company-gallery__list company-gallery__list--02">
+												</ul>
+											</div>
+										</dd>
+									</dl>
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title">GIẢI THƯỞNG/ CHỨNG NHẬN<button class="c-txt__add c-txt__add--sm js-show-modal" data-modal="create-award">Thêm</button></dt>
+										<dd class="company-gallery__content">
+											<span class="error _types03">Thông tin này cần thiết để tăng chất lượng dịch vụ</span>
+											<ul class="c-grid award-list">
+												<li class="c-grid__item award-list__item">
+													<div class="c-grid__control">
+														<button class="c-grid__control-delete"><img src="../../img/common/ico-edit.png" alt=""></button>
+														<button class="c-grid__control-edit"><img src="../../img/common/close-circle-02.png" alt=""></button>
+													</div>
+													<div class="award-list__img">
+														<img src="../../img/enterprice/img-adward-01.png" alt="">
+													</div>
+													<div class="award-list__ct c-txt__01">
+														<h4 class="award-list__ct-ttl">タイトル</h4>
+														<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+													</div>
+												</li>
+												<li class="c-grid__item award-list__item">
+													<div class="c-grid__control">
+														<button class="c-grid__control-delete"><img src="../../img/common/ico-edit.png" alt=""></button>
+														<button class="c-grid__control-edit"><img src="../../img/common/close-circle-02.png" alt=""></button>
+													</div>
+													<div class="award-list__img">
+														<img src="../../img/enterprice/img-award-02.png" alt="">
+													</div>
+													<div class="award-list__ct c-txt__01">
+														<h4 class="award-list__ct-ttl">タイトル</h4>
+														<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+													</div>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title"> DANH SÁCH CÁC DỰ ÁN NỔI BẬT ĐÃ TRIỂN KHAI (5) <button class="c-txt__add c-txt__add--sm js-show-modal" data-modal="feature-project">Thêm</button>
+										</dt>
+										<dd class="company-gallery__content">
+											<span class="error _types03">Thông tin này cần thiết để tăng chất lượng dịch vụ</span>
+											<ul class="c-grid project-list">
+												<li class="c-grid__item project-list__item">
+													<div class="c-grid__control">
+														<button class="c-grid__control-delete"><img src="../../img/common/ico-edit.png" alt=""></button>
+														<button class="c-grid__control-edit"><img src="../../img/common/close-circle-02.png" alt=""></button>
+													</div>
+													<div class="project-list__intro">
+														<div class="project-list__img">
+														</div>
+														<div class="project-list__ct c-txt__01">
+															<h4 class="award-list__ct-ttl">サービス名</h4>
+															<p>このアプリケーションは安全な蓄積投資パッケージを提供し、消費者がeコマースプラットフォームでキャッシュバックを利用して買い物できます</p>
+														</div>
+													</div>
+													<div class="project-list__detail c-txt__01">
+														<dl>
+															<dt>言語/テクノロジー</dt>
+															<dd>NodeJs , ReactJS , MySQL , Java , Swift</dd>
+														</dl>
+														<dl>
+															<dt>業務</dt>
+															<dd>Blockchain , Crypto , 小売＆Eコマース</dd>
+														</dl>
+														<dl>
+															<dt>規模</dt>
+															<dd>25 MM</dd>
+														</dl>
+														<dl>
+															<dt>Site/URL参考</dt>
+															<dd>Apple Store , Google Play</dd>
+														</dl>
+														<dl>
+															<dt>開発期間</dt>
+															<dd>開発期間</dd>
+														</dl>
+													</div>
+												</li>
+												<li class="c-grid__item project-list__item">
+													<div class="c-grid__control">
+														<button class="c-grid__control-delete"><img src="../../img/common/ico-edit.png" alt=""></button>
+														<button class="c-grid__control-edit"><img src="../../img/common/close-circle-02.png" alt=""></button>
+													</div>
+													<div class="project-list__intro">
+														<div class="project-list__img">
+														</div>
+														<div class="project-list__ct c-txt__01">
+															<h4 class="award-list__ct-ttl">サービス名</h4>
+															<p>このアプリケーションは安全な蓄積投資パッケージを提供し、消費者がeコマースプラットフォームでキャッシュバックを利用して買い物できます</p>
+														</div>
+													</div>
+													<div class="project-list__detail c-txt__01">
+														<dl>
+															<dt>言語/テクノロジー</dt>
+															<dd>NodeJs , ReactJS , MySQL , Java , Swift</dd>
+														</dl>
+														<dl>
+															<dt>業務</dt>
+															<dd>Blockchain , Crypto , 小売＆Eコマース</dd>
+														</dl>
+														<dl>
+															<dt>規模</dt>
+															<dd>25 MM</dd>
+														</dl>
+														<dl>
+															<dt>Site/URL参考</dt>
+															<dd>Apple Store , Google Play</dd>
+														</dl>
+														<dl>
+															<dt>開発期間</dt>
+															<dd>開発期間</dd>
+														</dl>
+													</div>
+												</li>
+												<li class="c-grid__item project-list__item">
+													<div class="c-grid__control">
+														<button class="c-grid__control-delete"><img src="../../img/common/ico-edit.png" alt=""></button>
+														<button class="c-grid__control-edit"><img src="../../img/common/close-circle-02.png" alt=""></button>
+													</div>
+													<div class="project-list__intro">
+														<div class="project-list__img">
+														</div>
+														<div class="project-list__ct c-txt__01">
+															<h4 class="award-list__ct-ttl">サービス名</h4>
+															<p>このアプリケーションは安全な蓄積投資パッケージを提供し、消費者がeコマースプラットフォームでキャッシュバックを利用して買い物できます</p>
+														</div>
+													</div>
+													<div class="project-list__detail c-txt__01">
+														<dl>
+															<dt>言語/テクノロジー</dt>
+															<dd>NodeJs , ReactJS , MySQL , Java , Swift</dd>
+														</dl>
+														<dl>
+															<dt>業務</dt>
+															<dd>Blockchain , Crypto , 小売＆Eコマース</dd>
+														</dl>
+														<dl>
+															<dt>規模</dt>
+															<dd>25 MM</dd>
+														</dl>
+														<dl>
+															<dt>Site/URL参考</dt>
+															<dd>Apple Store , Google Play</dd>
+														</dl>
+														<dl>
+															<dt>開発期間</dt>
+															<dd>開発期間</dd>
+														</dl>
+													</div>
+												</li>
+												<li class="c-grid__item project-list__item">
+													<div class="c-grid__control">
+														<button class="c-grid__control-delete"><img src="../../img/common/ico-edit.png" alt=""></button>
+														<button class="c-grid__control-edit"><img src="../../img/common/close-circle-02.png" alt=""></button>
+													</div>
+													<div class="project-list__intro">
+														<div class="project-list__img">
+														</div>
+														<div class="project-list__ct c-txt__01">
+															<h4 class="award-list__ct-ttl">サービス名</h4>
+															<p>このアプリケーションは安全な蓄積投資パッケージを提供し、消費者がeコマースプラットフォームでキャッシュバックを利用して買い物できます</p>
+														</div>
+													</div>
+													<div class="project-list__detail c-txt__01">
+														<dl>
+															<dt>言語/テクノロジー</dt>
+															<dd>NodeJs , ReactJS , MySQL , Java , Swift</dd>
+														</dl>
+														<dl>
+															<dt>業務</dt>
+															<dd>Blockchain , Crypto , 小売＆Eコマース</dd>
+														</dl>
+														<dl>
+															<dt>規模</dt>
+															<dd>25 MM</dd>
+														</dl>
+														<dl>
+															<dt>Site/URL参考</dt>
+															<dd>Apple Store , Google Play</dd>
+														</dl>
+														<dl>
+															<dt>開発期間</dt>
+															<dd>開発期間</dd>
+														</dl>
+													</div>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title mbpc-16">DANH SÁCH NHÂN VIÊN CỦA CÔNG TY</dt>
+										<dd class="company-gallery__content">
+											<button class="c-txt__add js-add-person" data-label="Nhân viên">Thêm nhân viên</button>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c-modal c-modal--create" id="add-type-company">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<h3 class="c-modal__ttl c-al--l">Thêm loại hình công ty</h3>
+						<div class="create-company__wp">
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Loại hình công ty (Tiếng Nhật)</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên loại hình công ty">
+								</dd>
+							</dl>
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Loại hình công ty (Tiếng Việt)</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên loại hình công ty">
+								</dd>
+							</dl>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+							<a href="#" class="c-btn__01">Thêm mới</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal c-modal--create" id="add-skills">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<h3 class="c-modal__ttl c-al--l">Thêm kỹ năng chính</h3>
+						<div class="create-company__wp">
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Kỹ năng chính (Tiếng Nhật)</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên kỹ năng chính">
+								</dd>
+							</dl>
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Kỹ năng chính (Tiếng Việt)</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên kỹ năng chính">
+								</dd>
+							</dl>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+							<a href="#" class="c-btn__01">Thêm mới</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal c-modal--create" id="add-domain">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<h3 class="c-modal__ttl c-al--l">Thêm thế mạnh về Domain nghiệp vụ</h3>
+						<div class="create-company__wp">
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Thế mạnh về Domain nghiệp vụ (Tiêng Nhật)</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập thế mạnh về Domain nghiệp vụ">
+								</dd>
+							</dl>
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Thế mạnh về Domain nghiệp vụ (Tiêng Việt)</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập thế mạnh về Domain nghiệp vụ">
+								</dd>
+							</dl>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+							<a href="#" class="c-btn__01">Thêm mới</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal c-modal--create" id="add-type-company-detail">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<h3 class="c-modal__ttl c-al--l">Thêm loại hình công ty detail</h3>
+						<div class="create-company__wp">
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Loại hình công ty</dt>
+								<dd class="create-company__field-input">
+									<select name="" id="" class="form-control form-control--select">
+										<option value="">Chọn loại hình công ty</option>
+										<option value="">--</option>
+										<option value="">--</option>
+										<option value="">--</option>
+									</select>
+								</dd>
+							</dl>
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Loại hình công ty detail (Tiếng Nhật)</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên loại hình công ty detail">
+								</dd>
+							</dl>
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Loại hình công ty detail (Tiếng Việt)</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên loại hình công ty detail">
+								</dd>
+							</dl>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+							<a href="#" class="c-btn__01">Thêm mới</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal create-company" id="create-award">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form" enctype="multipart/form-data">
+						<h3 class="c-modal__ttl">Thêm giải thưởng và chứng nhận</h3>
+						<div class="create-company__wp">
+							<div class="create-company__flex">
+								<div class="create-company__flex-img">
+									<span class="create-company__field-label"><span>*</span>Logo giải thưởng</span>
+									<div class="file-upload error02">
+										<input type="file" name="upload-img" accept="image/*">
+										<div class="close-btn"><img src="../../img/common/x-close-red.png" alt="Close"></div>
+									</div>
+								</div>
+								<div class="create-company__flex-main">
+									<dl class="create-company__field">
+										<dt class="create-company__field-label"><span>*</span>Tiêu đề</dt>
+										<dd class="create-company__field-input">
+											<input type="text" class="form-control error02" placeholder="Nhập tên giải thưởng">
+											<span class="error _types02">Tên giải thưởng không được để trống</span>
+										</dd>
+									</dl>
+									<dl class="create-company__field">
+										<dt class="create-company__field-label">Mô tả</dt>
+										<dd class="create-company__field-input">
+											<textarea type="text" class="form-control form-control--textarea form-control--textarea-108 error02" placeholder="Nhập mô tả"></textarea>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray js-cancel">Cancel</button>
+							<a href="#" class="c-btn__01">Save</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal create-company" id="feature-project">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form" enctype="multipart/form-data">
+						<h3 class="c-modal__ttl">Thêm dự án nổi bật</h3>
+						<div class="create-company__wp">
+							<div class="create-company__flex">
+								<div class="create-company__flex-img">
+									<span class="create-company__field-label"><span>*</span>Thumbnail</span>
+									<div class="file-upload error02 mbpc-30">
+										<input type="file" name="upload-img" accept="image/*">
+										<div class="close-btn"><img src="../../img/common/x-close-red.png" alt="Close"></div>
+									</div>
+									<span class="create-company__field-label"><span>*</span>Detail dự án</span>
+									<div class="file-upload error02">
+										<input type="file" name="upload-img" accept="image/*">
+										<div class="close-btn"><img src="../../img/common/x-close-red.png" alt="Close"></div>
+									</div>
+								</div>
+								<div class="create-company__flex-main">
+									<dl class="create-company__field">
+										<dt class="create-company__field-label"><span>*</span>Tên dự án</dt>
+										<dd class="create-company__field-input">
+											<input type="text" class="form-control error02" placeholder="Nhập tên dự án">
+											<span class="error _types02">Tên giải thưởng không được để trống</span>
+										</dd>
+									</dl>
+									<dl class="create-company__field">
+										<dt class="create-company__field-label">Mô tả dự án</dt>
+										<dd class="create-company__field-input">
+											<textarea type="text" class="form-control form-control--textarea form-control--textarea-108 error02" placeholder="Nhập mô tả dự án"></textarea>
+										</dd>
+									</dl>
+									<dl class="create-company__field">
+										<dt class="create-company__field-label"><span>*</span>Category<button class="c-txt__add c-txt__add--sm">Thêm</button></dt>
+										<dd class="create-company__field-input">
+											<div class="multiSelect project-cateogry">
+												<select multiple="multiple" class="multiSelect_field" data-placeholder="Chọn Category">
+													<option value="PHP">PHP</option>
+													<option value="Java">Java</option>
+													<option value="Nodejs">Nodejs</option>
+													<option value="HTML">JavaScript</option>
+													<option value="CSS">C#</option>
+													<option value="CSS">C++</option>
+													<option value="CSS">Software Engineer</option>
+													<option value="PHP">PHP</option>
+													<option value="Java">Java</option>
+													<option value="Nodejs">Nodejs</option>
+													<option value="HTML">JavaScript</option>
+													<option value="CSS">C#</option>
+													<option value="CSS">C++</option>
+													<option value="CSS">Software Engineer</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+									<dl class="create-company__field">
+										<dt class="create-company__field-label"><span>*</span>言語/テクノロジー<button class="c-txt__add c-txt__add--sm">Thêm</button></dt>
+										<dd class="create-company__field-input">
+											<div class="multiSelect project-cateogry">
+												<select multiple="multiple" class="multiSelect_field" data-placeholder="Chọn công nghệ/ ngôn ngữ">
+													<option value="PHP">PHP</option>
+													<option value="Java">Java</option>
+													<option value="Nodejs">Nodejs</option>
+													<option value="HTML">JavaScript</option>
+													<option value="CSS">C#</option>
+													<option value="CSS">C++</option>
+													<option value="CSS">Software Engineer</option>
+													<option value="PHP">PHP</option>
+													<option value="Java">Java</option>
+													<option value="Nodejs">Nodejs</option>
+													<option value="HTML">JavaScript</option>
+													<option value="CSS">C#</option>
+													<option value="CSS">C++</option>
+													<option value="CSS">Software Engineer</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+									<div class="create-company__flex-grid2">
+										<dl class="create-company__field">
+											<dt class="create-company__field-label"><span>*</span>規模</dt>
+											<dd class="create-company__field-input">
+												<input type="text" class="form-control" placeholder="Size dự án (MM)">
+											</dd>
+										</dl>
+										<dl class="create-company__field">
+											<dt class="create-company__field-label">Thời gian phát triển</dt>
+											<dd class="create-company__field-input">
+												<input type="text" class="form-control" placeholder="Nhập thời gian phát triển">
+											</dd>
+										</dl>
+									</div>
+									<dl class="create-company__field">
+										<dt class="create-company__field-label">Link Web</dt>
+										<dd class="create-company__field-input">
+											<input type="text" name="" id="" class="form-control error03" placeholder="Nhập Link Website">
+										</dd>
+									</dl>
+									<dl class="create-company__field">
+										<dt class="create-company__field-label">Link tải trên App Store</dt>
+										<dd class="create-company__field-input">
+											<input type="text" name="" id="" class="form-control error03" placeholder="Nhập Link tải trên App Store">
+										</dd>
+									</dl>
+									<dl class="create-company__field">
+										<dt class="create-company__field-label">Link tải trên CH Play</dt>
+										<dd class="create-company__field-input">
+											<input type="text" name="" id="" class="form-control error03" placeholder="Nhập Link tải trên App store">
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray js-cancel">Đóng</button>
+							<a href="#" class="c-btn__01">Save</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="../../js/jquery-ui.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+		<script src="../../js/setting.js"></script>
+		<script>
+			$('#type-of-company').select2(
+			{
+				width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+				placeholder: $(this).data('placeholder'),
+				closeOnSelect: false,
+			});
+			$(".js-add-type-company").on('click', function()
+			{
+				let value_option = $('#input-type-company').val();
+				let value_group_option = $('#group-type-company').val();
+				let field_option = '<option>' + value_option + '</option>';
+				$('#type-of-company').append(field_option);
+			})
+		</script>
+	</body>
+</html>

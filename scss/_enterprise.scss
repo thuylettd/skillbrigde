@@ -1,0 +1,444 @@
+@use 'vars' as *;
+
+#add-enterprise{
+    .c-modal__wp{
+        max-width: 936px;
+    }
+    .form-control--select{
+        background: #fff url(../img/common/chevron-down.png) no-repeat right 15px center/20px 20px;
+    }
+    .create-company__wp{
+        display: block;
+    }
+}
+
+.create-company{
+    &__flex{
+        @include flex(0,start,wrap);
+        width: 100%;
+        &-img{
+            width: 158px;
+        }
+        &-main{
+            width: calc(100% - 158px);
+            padding-left: 30px;
+            .create-company__field{
+                width: 100%;
+            }
+        }
+        &-grid2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 16px;
+        }
+        &-row3{
+            @include flex(betwen,center);
+            .create-company__field{
+                &:nth-child(1), &:nth-child(2){
+                    width: 255px;
+                }
+                &:nth-child(3){
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
+
+.file-upload{
+    height: 158px;
+    position: relative;
+    display: block !important;
+    @include p-after(100%, 100%){
+        background: url(../img/enterprice/img-upload.png) no-repeat center/cover;
+        top: 0;
+        left: 0;
+    }
+    &.error02{
+        border-radius: 12px;
+    }
+    input{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .close-btn{
+        width: 20px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        display: none;
+        z-index: 12;
+    }
+}
+
+.file-set{
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    &:after{
+        display: none;
+    }
+    .close-btn{
+        display: block;
+    }
+}
+
+
+//Styles draft detail
+.company-gallery{
+    margin-bottom: 16px;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    &__title{
+        @include flex(between, center);
+        // margin-bottom: 0;
+        .c-txt__add{
+            width: auto;
+            font-weight: 700;
+        }
+    }
+    &__content{
+        // padding-top: 16px;
+        font-family: $font-Averta-Rugular;
+        color: #0F1A2A;
+        &-empty{
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        &-txt-empty{
+            text-align: center;
+            font-size: 1.6rem;
+            display: block;
+            font-family: $font-Monterrat;
+            font-weight: 500;
+            color: #94A3B8;
+        }
+    }
+    
+    &__box{
+        margin-bottom: 24px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &-ttl{
+            @include font-size(14);
+            position: relative;
+            padding-left: 10px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            &::before{
+                content: "*";
+                @include font-size(16);
+                color: #ED2649;
+                display: inline-block;
+                margin-right: 4px;
+            }
+        }
+    }
+    
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+        li{
+            position: relative;
+            @include aspect-ratio(16, 12);
+            background: #D9D9D9;
+            border-radius: 8px;
+            overflow: hidden;
+            .remove{
+                width: 20px;
+                height: 20px;
+                background: url(../img/common/close-circle-02.png) no-repeat center/100%;
+                position: absolute;
+                top: 6px;
+                right: 6px;
+                z-index: 10;
+                cursor: pointer;
+                @include fn-hover;
+            }
+        }
+        &--02{
+            li{
+                @include aspect-ratio(16, 9);
+                border: 1px solid #D9D9D9;
+            }
+        }
+    }
+}
+
+
+.award-list{
+    &__item{
+        @include flex(between, start);
+    }
+    &__img{
+        width: 120px;
+        @include aspect-ratio(1, 1);
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    &__ct{
+        width: calc(100% - 136px);
+        font-family: $font-jp;
+        &-ttl{
+            @include fts(16, 25.6);
+            font-weight: 700;
+        }
+        p{
+            @include u-ellipsis-m(4);
+            line-height: 1.4;
+        }
+    }
+}
+
+.project-list{
+    &__intro{
+        @include flex(between, start);
+        margin-bottom: 10px;
+    }
+    &__img{
+        width: 80px;
+        @include aspect-ratio(1, 1);
+        border-radius: 12px;
+        overflow: hidden;
+        background: #D9D9D9;
+    }
+    &__ct{
+        width: calc(100% - 92px);
+        font-family: $font-jp;
+        &-ttl{
+            @include fts(16, 25.6);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        p{
+            @include u-ellipsis-m(2);
+            line-height: 1.4;
+            color: #64748B;
+        }
+    }
+    &__detail{
+        font-family: $font-jp;
+        line-height: 1.4;
+        dl{
+            @include flex(0, 0, wrap);
+            padding: 6px 8px;
+            border-bottom: 1px solid #E2E8F0;
+            dt{
+                width: 120px;
+            }
+            dd{
+                width: calc(100% - 120px);
+            }
+        }
+    }
+}
+
+
+
+.contact-person{
+    &__field{
+        .form-control{
+            margin-bottom: 6px;
+            &--textarea{
+                height: 86px;
+                margin-bottom: 0;
+                resize: auto;
+            }
+        }
+        
+        &--first{
+        
+        }
+        &--added{
+            padding-right: 32px;
+            position: relative;
+        }
+        
+        &-delete{
+            width: 24px;
+            height: 24px;
+            background: url(../img/common/x-close-red.png) no-repeat center/100%;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            border: none;
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+    
+}
+
+//styles edit page
+.is-edit-page{
+    .c-layout__left{
+        font-family: $font-Averta-Rugular;
+    }
+    
+    .company-detail__field-label{
+        color: #0F1A2A;
+        position: relative;
+        .c-txt__add{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            @include font-size(12);
+            font-weight: 400;
+            width: auto;
+            &::before{
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    
+    .form-control--select{
+        background: url(../img/common/chevron-down.png) no-repeat right 15px center/16px 16px;
+    }
+    
+    .company-gallery__title{
+        margin-bottom: 0;
+    }
+}
+
+
+.company-address{
+    &--first{
+        margin-bottom: 30px;
+    }
+    &--added{
+        padding-right: 42px;
+        position: relative;
+    }
+    &__label{
+        @include font-size(14);
+    }
+    &__iframe{
+        border-radius: 12px;
+        overflow: hidden;
+        iframe{
+            width: 100%;
+            height: 240px;
+            display: block;
+        }
+    }
+    &__form{
+        @include flex(between,0, wrap);
+        li{
+            width: calc((100% - 16px)/2);
+            margin-bottom: 16px;
+            &:last-of-type{
+                width: 100%;
+            }
+        }
+    }
+    &__delete{
+        width: 24px;
+        height: 24px;
+        background: url(../img/common/x-close-red.png) no-repeat center/100%;
+        position: absolute;
+        top: 38px;
+        right: 5px;
+        cursor: pointer;
+        border: none;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+
+.ckeditor-area{
+    margin-bottom: 10px;
+}
+
+.c-box{
+    padding: 24px;
+    border-radius: 12px;
+    background: #fff;
+}
+
+
+.c-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 30px;
+    &__item{
+        background: #F6F8FC;
+        border-radius: 12px;
+        padding: 16px;
+        position: relative;
+    }
+    &__control{
+        @include flex(0, center);
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        gap: 0 5px;
+        button{
+            width: 24px;
+            padding: 0;
+            border: none;
+            outline: 0;
+            background: transparent;
+            cursor: pointer;
+            @include fn-hover;
+        }
+    }
+}
+
+
+.select-skills, .domain-skills, .type-company{
+    .multiSelect_choice{
+        background: #F1F4F9;
+        color: #000;
+        border: none;
+        padding: 8px 12px;
+        &:after{
+            background: url(../img/common/close-circle.png) no-repeat center / 100%;
+        }
+    }
+}
+
+
+.btn-upload{
+    @include font-size(16);
+    font-weight: 700;
+    font-family: $font-Monterrat;
+    color: $color-main;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    border: none;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    @include fn-hover;
+    @include p-before(24px, 24px){
+        background: url(../img/common/upload.png) no-repeat center/100%;
+        position: relative;
+        margin-right: 5px;
+    }
+    input{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        cursor: pointer;
+    }
+}

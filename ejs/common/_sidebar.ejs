@@ -1,8 +1,8 @@
 <div class="cms-sidebar">
-	<h1 class="cms-sidebar__logo"><a href="#"><img src="../img/common/logo.png" alt=""></a></h1>
+	<h1 class="cms-sidebar__logo"><a href="#"><img src="<%= RELATIVE_PATH %>img/common/logo.png" alt=""></a></h1>
 	<ul class="cms-sidebar__nav">
 		<li class="cms-sidebar__nav-item <% if(pageData.template == 'dashboard'){ %>is-active<% } %>"><a href="/dashboard/">Dashboard</a></li>
-		<li class="cms-sidebar__nav-item <% if(pageData.template == 'company_manager'){ %>is-active<% } %>"><a href="/company_manager/">Quản lý doanh nghiệp</a></li>
+		<li class="cms-sidebar__nav-item <% if(pageData.template == 'company_manager' || pageData.template == 'draft_detail'){ %>is-active<% } %>"><a href="/company_manager/">Quản lý doanh nghiệp</a></li>
 		<li class="cms-sidebar__nav-item <% if(pageData.template == 'manpower' || pageData.template == 'company_edit' || pageData.template == 'company_detail'){ %>is-active<% } %>"><a href="/manpower/">Công ty Nhật cần người</a></li>
 		<li class="cms-sidebar__nav-item <% if(pageData.template == 'manpower_02' || pageData.template == 'company_02_edit' || pageData.template == 'company_02_detail'){ %>is-active<% } %>"><a href="/manpower_02/">Công ty cung ứng nhân lực</a></li>
 		<li class="cms-sidebar__nav-item <% if(pageData.template == 'candidate' || pageData.template == 'candidate_02' || pageData.template == 'candidate_create'  || pageData.template == 'candidate_detail'

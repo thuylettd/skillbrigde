@@ -8,15 +8,15 @@ $color-main: #F5601B !default;
 //====================================================
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
 @font-face {
-    font-family: 'Averta Std CY Bold';
-    src: url('../webfonts/AvertaStdCY-Bold.eot');
-    src: url('../webfonts/AvertaStdCY-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../webfonts/AvertaStdCY-Bold.woff2') format('woff2'),
-        url('../webfonts/AvertaStdCY-Bold.woff') format('woff'),
-        url('../webfonts/AvertaStdCY-Bold.ttf') format('truetype'),
-        url('../webfonts/AvertaStdCY-Bold.svg#AvertaStdCY-Bold') format('svg');
-    font-weight: bold;
+    font-family: 'Averta Std CY';
+    src: url('../webfonts/regular/AvertaStdCY-Regular.eot');
+    src: url('../webfonts/regular/AvertaStdCY-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/regular/AvertaStdCY-Regular.woff2') format('woff2'),
+        url('../webfonts/regular/AvertaStdCY-Regular.woff') format('woff'),
+        url('../webfonts/regular/AvertaStdCY-Regular.ttf') format('truetype'),
+        url('../webfonts/regular/AvertaStdCY-Regular.svg#AvertaStdCY-Bold') format('svg');
     font-style: normal;
     font-display: swap;
 }
@@ -28,7 +28,7 @@ $color-main: #F5601B !default;
         url('../webfonts/AvertaStdCY-Bold.woff') format('woff'),
         url('../webfonts/AvertaStdCY-Bold.ttf') format('truetype'),
         url('../webfonts/AvertaStdCY-Bold.svg#AvertaStdCY-Bold') format('svg');
-	font-weight: 400;
+	font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
@@ -49,8 +49,10 @@ $color-main: #F5601B !default;
 
 $font-base: "Noto Sans JP", sans-serif;
 $font-Averta-Bold: "Averta Std CY Bold", sans-serif;
+$font-Averta-Rugular: "Averta Std CY", sans-serif;
 $font-Averta-Semibold: "Averta Std CY Semibold", sans-serif;
 $font-Monterrat: "Montserrat", sans-serif;
+$font-jp: "Noto Serif JP", serif;
 
 
 

@@ -88,6 +88,10 @@ Component
 			line-height: 1.8;
 		}
 	}
+	&__02{
+		@include fts(16, 22.4);
+		font-weight: 400;
+	}
 	&__add{
 		@include font-size(16);
 		font-weight: 600;
@@ -105,6 +109,15 @@ Component
 			background: url(../img/common/ico-plus-or.png) no-repeat center/100%;
 			position: relative;
 			margin-right: 8px;
+		}
+		
+		&--sm{
+			@include font-size(14);
+			font-weight: 400;
+			&::before{
+				width: 16px;
+				height: 16px;
+			}
 		}
 	}
 }
@@ -212,13 +225,13 @@ Component
 	border: none;
 	cursor: pointer;
 	margin-top: 24px;
+	transition: .3s all;
 	@include mq{
 		margin-top: 22px;
 	}
 	&:hover{
 		background: linear-gradient(79.26deg, #F5601B -758.89%, #F5601B 397.15%);
 		opacity: 1;
-		transition: .3s ease all;
 	}
 }
 
@@ -229,6 +242,9 @@ Component
 	&--gray{
 		background: #E2E8F0 !important;
 		color: #0F1A2A;
+	}
+	&--auto{
+		width: auto;
 	}
 	&--add{
 		max-width: 140px;
@@ -255,6 +271,14 @@ Component
 		background: #0072F8;
 		color: #fff;
 		max-width: 192px;
+	}
+	&--green{
+		background: #009F50;
+		color: #fff;
+	}
+	&--red{
+		background: #ED2649;
+		color: #fff;
 	}
 }
 

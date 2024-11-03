@@ -17,6 +17,7 @@
 					<h1 class="cms-sidebar__logo"><a href="#"><img src="../img/common/logo.png" alt=""></a></h1>
 					<ul class="cms-sidebar__nav">
 						<li class="cms-sidebar__nav-item"><a href="/dashboard/">Dashboard</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/company_manager/">Quản lý doanh nghiệp</a></li>
 						<li class="cms-sidebar__nav-item"><a href="/manpower/">Công ty Nhật cần người</a></li>
 						<li class="cms-sidebar__nav-item"><a href="/manpower_02/">Công ty cung ứng nhân lực</a></li>
 						<li class="cms-sidebar__nav-item"><a href="/candidate/">Danh sách ứng viên</a></li>
@@ -168,6 +169,22 @@
 		</main>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="../js/jquery-ui.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 		<script src="../js/setting.js"></script>
+		<script>
+			$('#type-of-company').select2(
+			{
+				width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+				placeholder: $(this).data('placeholder'),
+				closeOnSelect: false,
+			});
+			$(".js-add-type-company").on('click', function()
+			{
+				let value_option = $('#input-type-company').val();
+				let value_group_option = $('#group-type-company').val();
+				let field_option = '<option>' + value_option + '</option>';
+				$('#type-of-company').append(field_option);
+			})
+		</script>
 	</body>
 </html>

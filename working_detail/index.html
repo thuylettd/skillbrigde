@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=1920">
+		<title>Quản lý doanh nghiệp</title>
+		<meta name="description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link type="text/css" rel="stylesheet" href="../css/styles.css">
+	</head>
+	<body>
+		<main id="page-working_detail" class="wrapper">
+			<div class="cms-main">
+				<div class="cms-sidebar">
+					<h1 class="cms-sidebar__logo"><a href="#"><img src="../img/common/logo.png" alt=""></a></h1>
+					<ul class="cms-sidebar__nav">
+						<li class="cms-sidebar__nav-item"><a href="/dashboard/">Dashboard</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/company_manager/">Quản lý doanh nghiệp</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/manpower/">Công ty Nhật cần người</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/manpower_02/">Công ty cung ứng nhân lực</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/candidate/">Danh sách ứng viên</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/faq/">Câu hỏi thường gặp</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/recruitment/">Quản lý template</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/contact/">Quản lý Contact Us</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/master_data/">Master data</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/system/">Cài đặt hệ thống</a></li>
+					</ul>
+				</div>
+				<div class="cms-content">
+					<div class="cms-heading">
+						<h2 class="cms-heading__ttl">Quản lý doanh nghiệp</h2>
+						<ul class="cms-heading__control">
+							<li class="cms-heading__control-notification"><a href="#"><img src="../img/common/icon-notification.png" alt="" width="40"></a></li>
+							<li class="cms-heading__control-notification"><a href="#"><img src="../img/common/vn.png" alt="" width="24"></a></li>
+							<li class="cms-heading__control-user">
+								<a href="#" class="wp js-dropdown">
+									<div class="cms-heading__control-avatar">
+										<img src="../img/common/avatar.png" alt="">
+									</div>
+									<div class="cms-heading__control-info">
+										<span class="namme">Quản Trị Viên</span>
+										<span class="position">Super Admintrator</span>
+									</div>
+								</a>
+								<ul class="c-dropdown">
+									<li><a href="#" class="js-show-modal" data-modal="changepass"><img src="../img/common/ico-changepass.png" width="20" alt="">Đổi mật khẩu</a></li>
+									<li><a href="#" class="js-show-modal" data-modal="register"><img src="../img/common/password-check.png" width="20" alt="">Cấp lại mật khẩu</a></li>
+									<li><a href="#" class="js-show-modal" data-modal="form-logout"><img src="../img/common/logout.png" width="20" alt="">Đăng xuất</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="company-detail">
+						<div class="area-control company-detail__control">
+							<div class="breadcrumb">
+								<a href="/company_manager/">Quản lý doanh nghiệp</a><span>Chi tiết doanh nghiệp</span>
+							</div>
+							<div class="btn-group btn-group--single">
+								<a href="/working_detail/edit/" class="c-btn__01">Chỉnh sửa</a>
+							</div>
+						</div>
+						<div class="cms-wrapper">
+							<div class="c-layout company-detail__wp">
+								<div class="c-layout__left">
+									<h2 class="c-ttl__01">THÔNG TIN DOANH NGHIỆP</h2>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">ID</dt>
+										<dd class="company-detail__field-text">VNCO-0150</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Tên doanh nghiệp</dt>
+										<dd class="company-detail__field-text">The Walt Disney Company</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Trạng thái:</dt>
+										<dd class="company-detail__field-text"><span class="label-status">Đang hoạt động</span></dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Người đại diện pháp luật:</dt>
+										<dd class="company-detail__field-text">
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Tên người, cách thức liên lạc:</dt>
+										<dd class="company-detail__field-text">
+											<ul class="c-dots">
+												<li>・Full Name 1 - Cách thức liên lạc 1</li>
+												<li>・Full Name 2 - Cách thức liên lạc 2</li>
+											</ul>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">TLoại hình công ty</dt>
+										<dd class="company-detail__field-text">デスクトップアプリ</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Loại hình công ty detail</dt>
+										<dd class="company-detail__field-text">Công ty out-sourcing chuyên về lĩnh vực AR, VR</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Quy mô</dt>
+										<dd class="company-detail__field-text">T301名 ~ 400名</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Địa chỉ:</dt>
+										<dd class="company-detail__field-text">
+											<p>Cơ sở 1: ホッカイドウ, ナカガワグンビフカチョウ, ヒガシ4ジョウミナミ, 290-1082</p>
+											<p>Cơ sở 2: フクオカケン, キタキュウシュウシコクラキタク, マナヅル, 106-1201</p>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Kỹ năng chính:</dt>
+										<dd class="company-detail__field-text"> PHP, Javascript, NodeJS, Blockchain, My SQL, Java </dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Thế mạnh về domain nghiệp vụ:</dt>
+										<dd class="company-detail__field-text"> Software Engineer </dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">URL ứng viên</dt>
+										<dd class="company-detail__field-text">
+											<label class="c-switch">
+												<input type="checkbox" checked="checked">
+												<div><a href="#" class="c-switch__link">.../disneycopany</a></div>
+											</label>
+										</dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Khái lược về doanh nghiệp:</dt>
+										<dd class="company-detail__field-text"> Lorem ipsum dolor sit amet consectetur. Odio ac elementum dui urna sed at enim nibh dolor. Facilisis nulla faucibus egestas faucibus nunc. </dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Thời gian tạo:</dt>
+										<dd class="company-detail__field-text"> 09:20 15/02/2024 </dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Note:</dt>
+										<dd class="company-detail__field-text"> Lorem ipsum dolor sit amet consectetur. Odio ac elementum dui urna sed at enim nibh dolor. Facilisis nulla faucibus egestas faucibus nunc. Lorem ipsum dolor sit amet consectetur. Odio ac elementum dui urna sed at enim nibh dolor. Facilisis nulla faucibus egestas faucibus nunc. </dd>
+									</dl>
+								</div>
+								<div class="c-layout__right disabled-fill">
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title">HÌNH ẢNH VỀ CÔNG TY (PC)</dt>
+										<dd class="company-gallery__content">
+											<ul class="company-gallery__list">
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+											</ul>
+										</dd>
+									</dl>
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title">HÌNH ẢNH VỀ CÔNG TY (SP)</dt>
+										<dd class="company-gallery__content">
+											<ul class="company-gallery__list">
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+											</ul>
+										</dd>
+									</dl>
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title">KHÁCH HÀNG ĐÃ VÀ ĐANG LÀM VIỆC</dt>
+										<dd class="company-gallery__content">
+											<div class="company-gallery__box">
+												<h3 class="company-gallery__box-ttl">Ảnh PC</h3>
+												<ul class="company-gallery__list company-gallery__list--02">
+													<li><img src="../img/enterprice/img-dummy.png" alt=""></li>
+												</ul>
+											</div>
+											<div class="company-gallery__box">
+												<h3 class="company-gallery__box-ttl">Ảnh SP</h3>
+												<ul class="company-gallery__list company-gallery__list--02">
+													<li><img src="../img/enterprice/img-dummy.png" alt=""></li>
+												</ul>
+											</div>
+										</dd>
+									</dl>
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title">GIẢI THƯỞNG/ CHỨNG NHẬN</dt>
+										<dd class="company-gallery__content">
+											<ul class="c-grid award-list">
+												<li class="c-grid__item award-list__item">
+													<div class="award-list__img">
+														<img src="../img/enterprice/img-adward-01.png" alt="">
+													</div>
+													<div class="award-list__ct c-txt__01">
+														<h4 class="award-list__ct-ttl">タイトル</h4>
+														<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+													</div>
+												</li>
+												<li class="c-grid__item award-list__item">
+													<div class="award-list__img">
+														<img src="../img/enterprice/img-award-02.png" alt="">
+													</div>
+													<div class="award-list__ct c-txt__01">
+														<h4 class="award-list__ct-ttl">タイトル</h4>
+														<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+													</div>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title">DANH SÁCH CÁC DỰ ÁN NỔI BẬT ĐÃ TRIỂN KHAI (5)</dt>
+										<dd class="company-gallery__content">
+											<ul class="c-grid project-list">
+												<li class="c-grid__item project-list__item">
+													<div class="project-list__intro">
+														<div class="project-list__img">
+														</div>
+														<div class="project-list__ct c-txt__01">
+															<h4 class="award-list__ct-ttl">サービス名</h4>
+															<p>このアプリケーションは安全な蓄積投資パッケージを提供し、消費者がeコマースプラットフォームでキャッシュバックを利用して買い物できます</p>
+														</div>
+													</div>
+													<div class="project-list__detail c-txt__01">
+														<dl>
+															<dt>言語/テクノロジー</dt>
+															<dd>NodeJs , ReactJS , MySQL , Java , Swift</dd>
+														</dl>
+														<dl>
+															<dt>業務</dt>
+															<dd>Blockchain , Crypto , 小売＆Eコマース</dd>
+														</dl>
+														<dl>
+															<dt>規模</dt>
+															<dd>25 MM</dd>
+														</dl>
+														<dl>
+															<dt>Site/URL参考</dt>
+															<dd>Apple Store , Google Play</dd>
+														</dl>
+														<dl>
+															<dt>開発期間</dt>
+															<dd>開発期間</dd>
+														</dl>
+													</div>
+												</li>
+												<li class="c-grid__item project-list__item">
+													<div class="project-list__intro">
+														<div class="project-list__img">
+														</div>
+														<div class="project-list__ct c-txt__01">
+															<h4 class="award-list__ct-ttl">サービス名</h4>
+															<p>このアプリケーションは安全な蓄積投資パッケージを提供し、消費者がeコマースプラットフォームでキャッシュバックを利用して買い物できます</p>
+														</div>
+													</div>
+													<div class="project-list__detail c-txt__01">
+														<dl>
+															<dt>言語/テクノロジー</dt>
+															<dd>NodeJs , ReactJS , MySQL , Java , Swift</dd>
+														</dl>
+														<dl>
+															<dt>業務</dt>
+															<dd>Blockchain , Crypto , 小売＆Eコマース</dd>
+														</dl>
+														<dl>
+															<dt>規模</dt>
+															<dd>25 MM</dd>
+														</dl>
+														<dl>
+															<dt>Site/URL参考</dt>
+															<dd>Apple Store , Google Play</dd>
+														</dl>
+														<dl>
+															<dt>開発期間</dt>
+															<dd>開発期間</dd>
+														</dl>
+													</div>
+												</li>
+												<li class="c-grid__item project-list__item">
+													<div class="project-list__intro">
+														<div class="project-list__img">
+														</div>
+														<div class="project-list__ct c-txt__01">
+															<h4 class="award-list__ct-ttl">サービス名</h4>
+															<p>このアプリケーションは安全な蓄積投資パッケージを提供し、消費者がeコマースプラットフォームでキャッシュバックを利用して買い物できます</p>
+														</div>
+													</div>
+													<div class="project-list__detail c-txt__01">
+														<dl>
+															<dt>言語/テクノロジー</dt>
+															<dd>NodeJs , ReactJS , MySQL , Java , Swift</dd>
+														</dl>
+														<dl>
+															<dt>業務</dt>
+															<dd>Blockchain , Crypto , 小売＆Eコマース</dd>
+														</dl>
+														<dl>
+															<dt>規模</dt>
+															<dd>25 MM</dd>
+														</dl>
+														<dl>
+															<dt>Site/URL参考</dt>
+															<dd>Apple Store , Google Play</dd>
+														</dl>
+														<dl>
+															<dt>開発期間</dt>
+															<dd>開発期間</dd>
+														</dl>
+													</div>
+												</li>
+												<li class="c-grid__item project-list__item">
+													<div class="project-list__intro">
+														<div class="project-list__img">
+														</div>
+														<div class="project-list__ct c-txt__01">
+															<h4 class="award-list__ct-ttl">サービス名</h4>
+															<p>このアプリケーションは安全な蓄積投資パッケージを提供し、消費者がeコマースプラットフォームでキャッシュバックを利用して買い物できます</p>
+														</div>
+													</div>
+													<div class="project-list__detail c-txt__01">
+														<dl>
+															<dt>言語/テクノロジー</dt>
+															<dd>NodeJs , ReactJS , MySQL , Java , Swift</dd>
+														</dl>
+														<dl>
+															<dt>業務</dt>
+															<dd>Blockchain , Crypto , 小売＆Eコマース</dd>
+														</dl>
+														<dl>
+															<dt>規模</dt>
+															<dd>25 MM</dd>
+														</dl>
+														<dl>
+															<dt>Site/URL参考</dt>
+															<dd>Apple Store , Google Play</dd>
+														</dl>
+														<dl>
+															<dt>開発期間</dt>
+															<dd>開発期間</dd>
+														</dl>
+													</div>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+									<dl class="c-box company-gallery">
+										<dt class="c-ttl__01 company-gallery__title">DANH SÁCH NHÂN VIÊN CỦA CÔNG TY</dt>
+										<dd class="company-gallery__content">
+											<div class="c-table c-table--company02">
+												<table>
+													<tr>
+														<th>STT</th>
+														<th>Mã</th>
+														<th>Tên ứng viên</th>
+														<th>Số điện thoại</th>
+														<th>Email</th>
+														<th>Trạng thái</th>
+														<th></th>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status">Đang hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status">Đang hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status label-status--danger">Ngừng hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status">Đang hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status label-status--danger">Ngừng hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status">Đang hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status">Đang hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status label-status--danger">Ngừng hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status">Đang hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status">Đang hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status">Đang hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td><a href="#" class="txt-link">UV000923</a></td>
+														<td>Aoi Katou</td>
+														<td>02483904832</td>
+														<td>username@gmail.com</td>
+														<td>
+															<span class="label-status">Đang hoạt động</span>
+														</td>
+														<td>
+															<button class="btn-action"></button>
+															<ul class="action-content">
+																<li class="action-content__edit"><a href="#">Chỉnh sửa</a></li>
+																<li class="action-content__delete"><a href="#">Xoá</a></li>
+															</ul>
+														</td>
+													</tr>
+												</table>
+											</div>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="../js/jquery-ui.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+		<script src="../js/setting.js"></script>
+		<script>
+			$('#type-of-company').select2(
+			{
+				width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+				placeholder: $(this).data('placeholder'),
+				closeOnSelect: false,
+			});
+			$(".js-add-type-company").on('click', function()
+			{
+				let value_option = $('#input-type-company').val();
+				let value_group_option = $('#group-type-company').val();
+				let field_option = '<option>' + value_option + '</option>';
+				$('#type-of-company').append(field_option);
+			})
+		</script>
+	</body>
+</html>

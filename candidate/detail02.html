@@ -17,6 +17,7 @@
 					<h1 class="cms-sidebar__logo"><a href="#"><img src="../img/common/logo.png" alt=""></a></h1>
 					<ul class="cms-sidebar__nav">
 						<li class="cms-sidebar__nav-item"><a href="/dashboard/">Dashboard</a></li>
+						<li class="cms-sidebar__nav-item"><a href="/company_manager/">Quản lý doanh nghiệp</a></li>
 						<li class="cms-sidebar__nav-item"><a href="/manpower/">Công ty Nhật cần người</a></li>
 						<li class="cms-sidebar__nav-item"><a href="/manpower_02/">Công ty cung ứng nhân lực</a></li>
 						<li class="cms-sidebar__nav-item is-active"><a href="/candidate/">Danh sách ứng viên</a></li>
@@ -163,7 +164,8 @@
 															<td>◯年<br>◯年<br>
 																<br>◯年<br>◯年<br>
 																<br>◯年<br>
-																<br>◯年 </td>
+																<br>◯年
+															</td>
 															<td>通常使用に問題なしで、指導も可能/通常使用に問題なし/調べながらであれば作業可能/自己研鑽/大学で使用&nbsp;</td>
 														</tr>
 														<tr>
@@ -276,9 +278,11 @@
 											<h3 class="c-ttl__03">自己PR</h3>
 											<div class="engineer-detail__main-pr">
 												<p>
-													<strong>上流工程からの一貫した経験</strong>私は社内SEとして、要件定義をはじめ、提案書・要件書の作成、工数見積もり、運用までの業務を行うことが可能です。普段の業務のなかでも常に新しい技術を吸収し、さらに腕を上げていくように心がけています。<br>また、リーダーとしてクライアントと要件交渉から調整まで行ってきた事もあり、企画からプロジェクトに参画する事が可能です。 </p>
+													<strong>上流工程からの一貫した経験</strong>私は社内SEとして、要件定義をはじめ、提案書・要件書の作成、工数見積もり、運用までの業務を行うことが可能です。普段の業務のなかでも常に新しい技術を吸収し、さらに腕を上げていくように心がけています。<br>また、リーダーとしてクライアントと要件交渉から調整まで行ってきた事もあり、企画からプロジェクトに参画する事が可能です。
+												</p>
 												<p>
-													<strong>プロジェクトマネージャー経験</strong>プロジェクト管理・メンバー育成・顧客折衝・構築業務などにも携わってきました。特にマネジメントに関しては、一作業員でありながら、メンバーの進捗管理やネットワーク知識・提案資料作成・顧客折衝方法の指導を行ってきました。提案・構築・導入、トラブルシューティングまで担当した経験から、様々なトラブルに対する切り分けポイントを把握しております。また、早期のシステム復旧に貢献することが可能です。 </p>
+													<strong>プロジェクトマネージャー経験</strong>プロジェクト管理・メンバー育成・顧客折衝・構築業務などにも携わってきました。特にマネジメントに関しては、一作業員でありながら、メンバーの進捗管理やネットワーク知識・提案資料作成・顧客折衝方法の指導を行ってきました。提案・構築・導入、トラブルシューティングまで担当した経験から、様々なトラブルに対する切り分けポイントを把握しております。また、早期のシステム復旧に貢献することが可能です。
+												</p>
 											</div>
 										</div>
 									</div>
@@ -294,6 +298,22 @@
 		</main>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="../js/jquery-ui.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 		<script src="../js/setting.js"></script>
+		<script>
+			$('#type-of-company').select2(
+			{
+				width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+				placeholder: $(this).data('placeholder'),
+				closeOnSelect: false,
+			});
+			$(".js-add-type-company").on('click', function()
+			{
+				let value_option = $('#input-type-company').val();
+				let value_group_option = $('#group-type-company').val();
+				let field_option = '<option>' + value_option + '</option>';
+				$('#type-of-company').append(field_option);
+			})
+		</script>
 	</body>
 </html>

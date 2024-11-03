@@ -1,0 +1,127 @@
+<div class="cms-main">
+	<%- include('common/_sidebar'); %>
+	<div class="cms-content">
+		<%- include('common/_header'); %>
+		<div class="manpower-page">
+			<div class="manpower-page__control">
+				<ul class="manpower-page__search">
+					<li class="manpower-page__search-field manpower-page__search-field--company-name">
+						<input type="text" class="form-control" placeholder="Mã, tên doanh nghiệp">
+					</li>
+					<li class="manpower-page__search-field manpower-page__search-field--status">
+						<select name="" id="" class="form-control form-control--select">
+							<option value="">Trạng thái</option>
+							<option value="">--</option>
+							<option value="">--</option>
+						</select>
+					</li>
+				</ul>
+				<a href="#" class="c-btn__01 c-btn__01--add js-show-modal" data-modal="add-enterprise">Tạo mới</a>
+			</div>
+			<div class="manpower-page__wp">
+				<%- include('table/_table_company_manager.ejs'); %>
+			</div>
+			<%- include('common/_area_footer.ejs'); %>
+		</div>
+	</div>
+</div>
+
+
+<div class="c-modal create-company" id="add-enterprise">
+	<div class="c-modal__wp">
+		<form action="" method="post" class="c-modal__form" enctype="multipart/form-data">
+			<h3 class="c-modal__ttl">Thêm mới doanh nghiệp</h3>
+			<div class="create-company__wp">
+				<div class="create-company__flex">
+					<div class="create-company__flex-img">
+						<span class="create-company__field-label">Logo</span>
+						<div class="file-upload">
+							<input type="file" name="upload-img" accept="image/*" />
+							<div class="close-btn"><img src="../img/common/x-close-red.png" alt="Close"></div>
+						</div>
+					</div>
+					<div class="create-company__flex-main">
+						<dl class="create-company__field">
+							<dt class="create-company__field-label"><span>*</span>企業名</dt>
+							<dd class="create-company__field-input">
+								<input type="text" class="form-control error02" placeholder="Nhập tên doanh nghiệp">
+								<span class="error _types02">Tên doanh nghiệp không được để trống</span>
+							</dd>
+						</dl>
+						<div class="create-company__flex-grid2">
+							<dl class="create-company__field">
+								<dt class="create-company__field-label">Tên người đại diện pháp luật</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên người đại diện">
+								</dd>
+							</dl>
+							<dl class="create-company__field">
+								<dt class="create-company__field-label">Tên người đảm nhận liên lạc</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập tên người liên lạc">
+								</dd>
+							</dl>
+						</div>
+						<div class="create-company__flex-row3">
+							<dl class="create-company__field">
+								<dt class="create-company__field-label">会社種別</dt>
+								<dd class="create-company__field-input">
+									<select name="" id="" class="form-control form-control--select">
+										<option value="">Chọn</option>
+										<option value="">--</option>
+										<option value="">--</option>
+										<option value="">--</option>
+									</select>
+								</dd>
+							</dl>
+							<dl class="create-company__field">
+								<dt class="create-company__field-label">企業業界</dt>
+								<dd class="create-company__field-input">
+									<select name="" id="" class="form-control form-control--select">
+										<option value="">Chọn</option>
+										<option value="">--</option>
+										<option value="">--</option>
+										<option value="">--</option>
+									</select>
+								</dd>
+							</dl>
+							<dl class="create-company__field">
+								<dt class="create-company__field-label">企業規模</dt>
+								<dd class="create-company__field-input">
+									<select name="" id="" class="form-control form-control--select">
+										<option value="">Chọn</option>
+										<option value="">--</option>
+										<option value="">--</option>
+										<option value="">--</option>
+									</select>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<dl class="create-company__field create-company__field--full">
+					<dt class="create-company__field-label">主なスキル</dt>
+					<dd class="create-company__field-input">
+						<select name="" id="" class="form-control form-control--select">
+							<option value="">Chọn các kỹ năng chính của doanh nghiệp</option>
+							<option value="">--</option>
+							<option value="">--</option>
+						</select>
+					</dd>
+				</dl>
+				<dl class="create-company__field create-company__field--full">
+					<dt class="create-company__field-label">主なスキル</dt>
+					<dd class="create-company__field-input">
+						<textarea name="" id="" class="form-control form-control--textarea" placeholder="Nhập hồ sơ công ty"></textarea>
+					</dd>
+				</dl>
+			</div>
+			<div class="c-modal__control">
+				<button class="c-btn__01 c-btn__01--gray js-cancel">Cancel</button>
+				<a href="#" class="c-btn__01">Save as draft</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+
