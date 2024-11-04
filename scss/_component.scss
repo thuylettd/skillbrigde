@@ -147,38 +147,6 @@ Component
 		margin-bottom: 16px;
 		@include font-size(16);
 	}
-	&__02{
-		@include font-size(50);
-		line-height: 1.2;
-		font-weight: 700;
-		@include mq(lg){
-			font-size: c-max-size(34px, 6vw);
-		}
-		&-cap{
-			display: block;
-			margin-top: 15px;
-			font-size: 35%;
-			@include mq(sm){
-				font-size: c-max-size(15px, 35%);
-			}
-		}
-	}
-	&__03{
-		@include fts(24, 33.6);
-		font-weight: 600;
-		background: -webkit-linear-gradient(#F5601B, #FF862A);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		margin-bottom: 12px;
-		@include mq{
-			@include font-size(20);
-		}
-	}
-	&__04{
-		@include font-size(14);
-		font-weight: 600;
-		color: #64748B;
-	}
 }
 
 
@@ -197,14 +165,6 @@ Component
         }
         ul{
             padding-left: 47px;
-        }
-    }
-    &--styles02{
-        @include mq{
-            @include fts(16, 22.4);
-            li{
-                margin-bottom: 0;
-            }
         }
     }
 }
@@ -281,24 +241,5 @@ Component
 		color: #fff;
 	}
 }
-
-.c-btn__delete{
-	max-width: 50px;
-	display: inline-flex;
-	align-items: center;
-	@include font-size(14);
-	font-weight: 500;
-	font-family: $font-Monterrat;
-	color: #ED2649;
-	@include p-before(20px, 20px){
-		background: url(../img/common/trash.png) no-repeat center/100%;
-		position: relative;
-		margin-right: 3px;
-	}
-}
-
-
-  
-
 
 
