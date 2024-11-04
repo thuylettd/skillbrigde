@@ -1,4 +1,4 @@
-https://thuylettd.github.io/skillbrigde/company_manager/<br>
+<a href="https://thuylettd.github.io/skillbrigde/company_manager/">https://thuylettd.github.io/skillbrigde/company_manager/</a><br>
 https://thuylettd.github.io/skillbrigde/working_detail/<br>
 https://thuylettd.github.io/skillbrigde/working_detail/edit/<br>
 https://thuylettd.github.io/skillbrigde/draft_detail/<br>
