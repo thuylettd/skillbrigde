@@ -2271,7 +2271,7 @@ Layout
 .action-content {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 55px;
   right: 18px;
   width: 190px;
   padding: 10px;
@@ -2987,6 +2987,9 @@ Component
 }
 .c-btn__01--auto {
   width: auto;
+  min-width: -webkit-max-content !important;
+  min-width: -moz-max-content !important;
+  min-width: max-content !important;
 }
 .c-btn__01--add {
   max-width: 140px;
@@ -3766,6 +3769,14 @@ Pages
   -ms-flex-align: center;
   -webkit-box-align: center;
           align-items: center;
+  position: relative;
+}
+.company-gallery__title .btn-upload {
+  font-weight: 700;
+}
+.company-gallery__title .btn-upload::before {
+  width: 24px;
+  height: 24px;
 }
 .company-gallery__title .c-txt__add {
   width: auto;
@@ -3872,6 +3883,16 @@ Pages
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  font-family: "object-fit: cover", sans-serif;
+}
+.company-gallery__list--02 li img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   font-family: "object-fit: cover", sans-serif;
 }
 
@@ -4069,6 +4090,10 @@ Pages
 .company-address__iframe {
   border-radius: 12px;
   overflow: hidden;
+  margin-bottom: 15px;
+}
+.company-address__iframe:last-of-type {
+  margin-bottom: 0;
 }
 .company-address__iframe iframe {
   width: 100%;
@@ -4086,10 +4111,7 @@ Pages
   flex-wrap: wrap;
 }
 .company-address__form li {
-  width: calc((100% - 16px) / 2);
   margin-bottom: 16px;
-}
-.company-address__form li:last-of-type {
   width: 100%;
 }
 .company-address__delete {
@@ -4169,7 +4191,7 @@ Pages
 
 .btn-upload {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 400;
   font-family: "Montserrat", sans-serif;
   color: #F5601B;
   display: -webkit-inline-box !important;
@@ -4185,7 +4207,9 @@ Pages
   outline: 0;
   background: transparent;
   cursor: pointer;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 @media (any-hover: hover) {
   .btn-upload {
@@ -4200,8 +4224,8 @@ Pages
   content: "";
   display: inline-block;
   position: absolute;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   background: url(../img/common/upload.png) no-repeat center/100%;
   position: relative;
   margin-right: 5px;

@@ -8,6 +8,7 @@
 		<meta name="description" content="">
 		<meta name="format-detection" content="telephone=no">
 		<link rel="shortcut icon" href="../favicon.ico">
+		<link type="text/css" rel="stylesheet" href="../css/lightbox.min.css">
 		<link type="text/css" rel="stylesheet" href="../css/styles.css">
 	</head>
 	<body>
@@ -80,8 +81,7 @@
 									</dl>
 									<dl class="company-detail__field">
 										<dt class="company-detail__field-label">Người đại diện pháp luật:</dt>
-										<dd class="company-detail__field-text">
-										</dd>
+										<dd class="company-detail__field-text"> Full Name </dd>
 									</dl>
 									<dl class="company-detail__field">
 										<dt class="company-detail__field-label">Tên người, cách thức liên lạc:</dt>
@@ -93,7 +93,11 @@
 										</dd>
 									</dl>
 									<dl class="company-detail__field">
-										<dt class="company-detail__field-label">TLoại hình công ty</dt>
+										<dt class="company-detail__field-label">Category gán cho doanh nghiệp</dt>
+										<dd class="company-detail__field-text"> Category 1, Category 2 </dd>
+									</dl>
+									<dl class="company-detail__field">
+										<dt class="company-detail__field-label">Loại hình công ty</dt>
 										<dd class="company-detail__field-text">デスクトップアプリ</dd>
 									</dl>
 									<dl class="company-detail__field">
@@ -102,13 +106,19 @@
 									</dl>
 									<dl class="company-detail__field">
 										<dt class="company-detail__field-label">Quy mô</dt>
-										<dd class="company-detail__field-text">T301名 ~ 400名</dd>
+										<dd class="company-detail__field-text">301名 ~ 400名</dd>
 									</dl>
 									<dl class="company-detail__field">
 										<dt class="company-detail__field-label">Địa chỉ:</dt>
 										<dd class="company-detail__field-text">
 											<p>Cơ sở 1: ホッカイドウ, ナカガワグンビフカチョウ, ヒガシ4ジョウミナミ, 290-1082</p>
+											<div class="company-address__iframe">
+												<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.016182577622!2d105.78065977587246!3d21.03203848766467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abfe95ba0d93%3A0x8ab9e245cb41e1f0!2zVMOyYSBuaMOgIEtpbSDDgW5o!5e0!3m2!1svi!2s!4v1730647610721!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+											</div>
 											<p>Cơ sở 2: フクオカケン, キタキュウシュウシコクラキタク, マナヅル, 106-1201</p>
+											<div class="company-address__iframe">
+												<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.016182577622!2d105.78065977587246!3d21.03203848766467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abfe95ba0d93%3A0x8ab9e245cb41e1f0!2zVMOyYSBuaMOgIEtpbSDDgW5o!5e0!3m2!1svi!2s!4v1730647610721!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+											</div>
 										</dd>
 									</dl>
 									<dl class="company-detail__field">
@@ -166,7 +176,7 @@
 										</dd>
 									</dl>
 									<dl class="c-box company-gallery">
-										<dt class="c-ttl__01 company-gallery__title">DANH SÁCH CÁC DỰ ÁN NỔI BẬT ĐÃ TRIỂN KHAI (5)</dt>
+										<dt class="c-ttl__01 company-gallery__title">DANH SÁCH CÁC DỰ ÁN NỔI BẬT ĐÃ TRIỂN KHAI (0)</dt>
 										<dd class="company-gallery__content">
 											<div class="company-gallery__content-empty">
 												<img src="../img/enterprice/piopup.png" alt="" width="100">
@@ -197,6 +207,23 @@
 							<span class="c-modal__close js-cancel"><img src="../img/common/x-close.png" alt="" width="24"></span>
 						</div>
 						<div class="c-modal__content c-al--c">
+							<p class="c-txt__02">Còn một vài thông tin cần bổ sung để hỗ trợ công ty dễ tiếp cận tới người dùng. Bạn có chắc chắn muốn công khai doanh nghiệp này không?</p>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray c-btn__01--auto js-cancel">Tôi đã hiểu</button>
+							<a href="#" class="c-btn__01">Xác nhận</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal c-modal--confirm is-show" id="public-enterprise02">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<div class="c-modal__heading">
+							<h3 class="c-modal__ttl">Cảnh báo</h3>
+							<span class="c-modal__close js-cancel"><img src="../img/common/x-close.png" alt="" width="24"></span>
+						</div>
+						<div class="c-modal__content c-al--c">
 							<p class="c-txt__02">Thông tin doanh nghiệp chưa đầy đủ các thông tin bắt buộc. Vui lòng kiểm tra lại.</p>
 						</div>
 						<div class="c-modal__control">
@@ -208,21 +235,13 @@
 		</main>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="../js/jquery-ui.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+		<script src="../js/lightbox.min.js"></script>
 		<script src="../js/setting.js"></script>
 		<script>
-			$('#type-of-company').select2(
+			lightbox.option(
 			{
-				width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-				placeholder: $(this).data('placeholder'),
-				closeOnSelect: false,
-			});
-			$(".js-add-type-company").on('click', function()
-			{
-				let value_option = $('#input-type-company').val();
-				let value_group_option = $('#group-type-company').val();
-				let field_option = '<option>' + value_option + '</option>';
-				$('#type-of-company').append(field_option);
+				'resizeDuration': 200,
+				'wrapAround': true
 			})
 		</script>
 	</body>

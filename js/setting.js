@@ -105,18 +105,12 @@ $('.js-add-address').click(function (e) {
                                     <span class="company-address__label">Địa chỉ ` + id_address + `</span>
                                     <ul class="company-address__form">
                                         <li class="company-address__input">
-                                            <select name="" id="" class="form-control form-control--select">
-                                                <option value="Japan">Japan</option>
-                                                <option value="">--</option>
-                                                <option value="">--</option>
-                                            </select>
+                                            <input type="text" class="form-control" placeholder="Địa chỉ cụ thể">
                                         </li>
                                         <li class="company-address__input">
-                                            <input type="text" class="form-control error02" placeholder="Nhập thành phố">
+                                            <input type="text" class="form-control" placeholder="Link URL Google map">
                                         </li>
-                                        <li class="company-address__input">
-                                            <input type="text" class="form-control error02" placeholder="Địa chỉ cụ thể">
-                                        </li>
+                                        <span class="company-address__label">Preview map</span>
                                     </ul>
                                     <button class="company-address__delete"></button>
                                 </div>` );
@@ -132,23 +126,25 @@ $('.js-add-address').click(function (e) {
 jQuery(function () {
 	jQuery('.multiSelect').each(function (e) {
 		var self = jQuery(this);
+		
 		var field = self.find('.multiSelect_field');
 		var fieldOption = field.find('option');
 		var placeholder = field.attr('data-placeholder');
-
+		var select_id = self.find('.multiSelect_field').attr('id');
+		
 		field.hide().after(`<div class="multiSelect_dropdown"></div>
 						  <span class="multiSelect_placeholder">` + placeholder + `</span>
 						  <ul class="multiSelect_list"></ul>
 						  <span class="multiSelect_arrow"></span>`);
-
+		
+	    var list = self.find('.multiSelect_list');
 		fieldOption.each(function (e) {
-			jQuery('.multiSelect_list').append(`<li class="multiSelect_option" data-value="` + jQuery(this).val() + `">
+			list.append(`<li class="multiSelect_option" data-value="` + jQuery(this).val() + `">
 											  <a class="multiSelect_text">`+ jQuery(this).text() + `</a>
 											</li>`);
 		});
 
 		var dropdown = self.find('.multiSelect_dropdown');
-		var list = self.find('.multiSelect_list');
 		var option = self.find('.multiSelect_option');
 		var optionText = self.find('.multiSelect_text');
 
@@ -174,9 +170,6 @@ jQuery(function () {
 				});
 			}).addClass('-hasValue');
 			list.css('top', dropdown.height() + 5);
-			// if (!option.not('.-selected').length) {
-			// 	list.append('<h5 class="multiSelect_noselections">No Selections</h5>');
-			// }
 		});
 
 		dropdown.click(function (e) {
@@ -257,23 +250,55 @@ $(document).ready(function () {
 		$('.upload-multile-file').each(function () {
 			let sefl = $(this);
 			let data_image = sefl.attr('data-img');
-			sefl.on("change", function (e) {
-				var files = e.target.files,
-					filesLength = files.length;
-				for (var i = 0; i < filesLength; i++) {
-					var f = files[i]
-					var fileReader = new FileReader();
-					fileReader.onload = (function (e) {
-						var file = e.target;
-						var template_img = `<li><img src="`+ e.target.result +`" alt=""><span class="remove"></span></li>`;
-						sefl.closest('.company-gallery').find("#" + data_image).append(template_img);
-						$(".remove").click(function () {
-							$(this).parent().remove();
+			
+			
+			if (data_image == "image-company-03" || data_image == "image-company-03SP") {
+				sefl.on("change", function (e) {
+					var files = e.target.files,
+						filesLength = files.length;
+					for (var i = 0; i < filesLength; i++) {
+						var f = files[i]
+						var fileReader = new FileReader();
+						fileReader.onload = (function (e) {
+							var file = e.target;
+							var template_img = `<li><img src="`+ e.target.result +`" alt=""><span class="remove"></span></li>`;
+							sefl.closest('.company-gallery__box').find("#" + data_image).append(template_img);
+							sefl.closest('.company-gallery__box').find(".content-empty").hide();
+							$(".remove").click(function () {
+								$(this).parent().remove();
+								if (sefl.closest('.company-gallery__box').find(".company-gallery__list li").length == 0) {
+									sefl.closest('.company-gallery__box').find(".content-empty").show();
+								}
+							});
+							
 						});
-					});
-					fileReader.readAsDataURL(f);
-				}
-			});
+						fileReader.readAsDataURL(f);
+					}
+				});
+			} else {
+				sefl.on("change", function (e) {
+					var files = e.target.files,
+						filesLength = files.length;
+					for (var i = 0; i < filesLength; i++) {
+						var f = files[i]
+						var fileReader = new FileReader();
+						fileReader.onload = (function (e) {
+							var file = e.target;
+							var template_img = `<li><img src="`+ e.target.result +`" alt=""><span class="remove"></span></li>`;
+							sefl.closest('.company-gallery').find("#" + data_image).append(template_img);
+							sefl.closest('.company-gallery').find(".content-empty").hide();
+							$(".remove").click(function () {
+								$(this).parent().remove();
+								if (sefl.closest('.company-gallery').find(".company-gallery__list li").length == 0) {
+									sefl.closest('.company-gallery').find(".content-empty").show();
+								}
+							});
+							
+						});
+						fileReader.readAsDataURL(f);
+					}
+				});
+			}
 		})
 		
 	} else {
