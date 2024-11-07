@@ -102,7 +102,7 @@
 									</dl>
 									<dl class="company-detail__field">
 										<dt class="company-detail__field-label">
-											<span class="required">*</span>Category gán cho doanh nghiệp <button class="c-txt__add js-show-modal" data-modal="add-categpry-company">Thêm</button>
+											<span class="required">*</span>Category gán cho doanh nghiệp <button class="c-txt__add js-show-modal" data-modal="assign-category">Thêm</button>
 										</dt>
 										<dd class="company-detail__field-text">
 											<div class="multiSelect type-company">
@@ -252,7 +252,8 @@
 										</dd>
 									</dl>
 									<dl class="company-detail__field">
-										<dt class="company-detail__field-label"> Thế mạnh về domain nghiệp vụ: <button class="c-txt__add js-show-modal" data-modal="add-domain">Thêm</button>
+										<dt class="company-detail__field-label">
+											<span class="required">*</span>Thế mạnh về domain nghiệp vụ: <button class="c-txt__add js-show-modal" data-modal="add-domain">Thêm</button>
 										</dt>
 										<dd class="company-detail__field-text">
 											<div class="multiSelect domain-skills">
@@ -273,6 +274,7 @@
 													<option value="CSS">Software Engineer</option>
 												</select>
 											</div>
+											<span class="error _types02">Thế mạnh về domain nghiệp vụ không được để trống</span>
 										</dd>
 									</dl>
 									<dl class="company-detail__field">
@@ -380,7 +382,8 @@
 										</dd>
 									</dl>
 									<dl class="c-box company-gallery">
-										<dt class="c-ttl__01 company-gallery__title"> DANH SÁCH CÁC DỰ ÁN NỔI BẬT ĐÃ TRIỂN KHAI (4) <button class="c-txt__add c-txt__add--sm js-show-modal" data-modal="feature-project">Thêm</button>
+										<dt class="c-ttl__01 company-gallery__title"> DANH SÁCH CÁC DỰ ÁN NỔI BẬT ĐÃ TRIỂN KHAI (4) <span class="error _types03">Thông tin này cần thiết để tăng chất lượng dịch vụ</span>
+											<button class="c-txt__add c-txt__add--sm js-show-modal" data-modal="feature-project">Thêm</button>
 										</dt>
 										<dd class="company-gallery__content">
 											<span class="error _types03">Thông tin này cần thiết để tăng chất lượng dịch vụ</span>
@@ -627,12 +630,7 @@
 							<dl class="create-company__field create-company__field--full">
 								<dt class="create-company__field-label"><span>*</span>Loại hình công ty</dt>
 								<dd class="create-company__field-input">
-									<select name="" id="" class="form-control form-control--select">
-										<option value="">Chọn loại hình công ty</option>
-										<option value="">--</option>
-										<option value="">--</option>
-										<option value="">--</option>
-									</select>
+									<input type="text" class="form-control" placeholder="Nhập tên loại hình công ty">
 								</dd>
 							</dl>
 							<dl class="create-company__field create-company__field--full">
@@ -645,6 +643,25 @@
 								<dt class="create-company__field-label"><span>*</span>Loại hình công ty detail (Tiếng Việt)</dt>
 								<dd class="create-company__field-input">
 									<input type="text" class="form-control" placeholder="Nhập tên loại hình công ty detail">
+								</dd>
+							</dl>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray js-cancel">Hủy</button>
+							<a href="#" class="c-btn__01">Thêm mới</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal c-modal--create" id="assign-category">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<h3 class="c-modal__ttl c-al--l">Thêm category gán cho doanh nghiệp</h3>
+						<div class="create-company__wp">
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Category gán cho doanh nghiệp</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" placeholder="Nhập category gán cho doanh nghiệp">
 								</dd>
 							</dl>
 						</div>

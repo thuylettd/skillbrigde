@@ -209,7 +209,7 @@ $(document).on('change', 'input[type="file"]', function () {
 		$(this).parent().prev().show();
 		$('.btn-upload').addClass('disable');
 	})
-});
+});vvv 
 
 
 
