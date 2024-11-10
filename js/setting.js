@@ -82,13 +82,26 @@ $('.js-add-person').click(function (e) {
 })
 
 //Add person 02
+
+var id_contact_person = 0;
 $('.js-add-contact-person').click(function (e) {
 	e.preventDefault();
-	$(this).before(`<div class="contact-person__field contact-person__field--added">
-		<input type="text" class="form-control" value="Full Name A">
-		<textarea name="" id="" class="form-control form-control--textarea" placeholder="Cách liên lạc với người đảm nhận quan hệ 1 -1"></textarea>
-		<button class="contact-person__field-delete"></button>
-	</div>` );
+	id_contact_person++;
+	if (id_contact_person > 1) {
+		$(this).before(`<div class="contact-person__field contact-person__field--added"><span class="company-detail__field-label">Tên và cách thức người đảm nhận liên lạc số <span class="number"></span></span>
+			<input type="text" class="form-control" value="Full Name A">
+			<textarea name="" id="" class="form-control form-control--textarea" placeholder="Cách liên lạc với người đảm nhận"></textarea>
+			<button class="contact-person__field-delete"></button>
+		</div>` );
+	} else {
+		$(this).before(`<div class="contact-person__field contact-person__field--added">
+			<input type="text" class="form-control" value="Full Name A">
+			<textarea name="" id="" class="form-control form-control--textarea" placeholder="Cách liên lạc với người đảm nhận"></textarea>
+			<button class="contact-person__field-delete"></button>
+		</div>` );
+	}
+
+
 	$('.contact-person__field-delete').click(function (e) {
 		e.preventDefault();
 		$(this).parent().remove();
@@ -209,7 +222,7 @@ $(document).on('change', 'input[type="file"]', function () {
 		$(this).parent().prev().show();
 		$('.btn-upload').addClass('disable');
 	})
-});vvv 
+}); 
 
 
 
@@ -250,18 +263,17 @@ $(document).ready(function () {
 		$('.upload-multile-file').each(function () {
 			let sefl = $(this);
 			let data_image = sefl.attr('data-img');
-			
-			
-			if (data_image == "image-company-03" || data_image == "image-company-03SP") {
-				sefl.on("change", function (e) {
-					var files = e.target.files,
-						filesLength = files.length;
-					for (var i = 0; i < filesLength; i++) {
-						var f = files[i]
-						var fileReader = new FileReader();
-						fileReader.onload = (function (e) {
-							var file = e.target;
-							var template_img = `<li><img src="`+ e.target.result +`" alt=""><span class="remove"></span></li>`;
+
+			sefl.on("change", function (e) {
+				var files = e.target.files,
+					filesLength = files.length;
+				
+				for (var i = 0; i < 5; i++) {
+					var f = files[i];
+					var fileReader = new FileReader();
+					fileReader.onload = (function (e) {
+						var template_img = `<li><img src="` + e.target.result + `" alt=""><span class="remove"></span></li>`;
+						if (data_image == "image-company-03" || data_image == "image-company-03SP") { 
 							sefl.closest('.company-gallery__box').find("#" + data_image).append(template_img);
 							sefl.closest('.company-gallery__box').find(".content-empty").hide();
 							$(".remove").click(function () {
@@ -270,21 +282,7 @@ $(document).ready(function () {
 									sefl.closest('.company-gallery__box').find(".content-empty").show();
 								}
 							});
-							
-						});
-						fileReader.readAsDataURL(f);
-					}
-				});
-			} else {
-				sefl.on("change", function (e) {
-					var files = e.target.files,
-						filesLength = files.length;
-					for (var i = 0; i < filesLength; i++) {
-						var f = files[i]
-						var fileReader = new FileReader();
-						fileReader.onload = (function (e) {
-							var file = e.target;
-							var template_img = `<li><img src="`+ e.target.result +`" alt=""><span class="remove"></span></li>`;
+						} else {
 							sefl.closest('.company-gallery').find("#" + data_image).append(template_img);
 							sefl.closest('.company-gallery').find(".content-empty").hide();
 							$(".remove").click(function () {
@@ -293,14 +291,16 @@ $(document).ready(function () {
 									sefl.closest('.company-gallery').find(".content-empty").show();
 								}
 							});
-							
-						});
-						fileReader.readAsDataURL(f);
+						}
+					});
+					console.log(i);
+					if (i == 4) {
+						sefl.addClass('is-disabled');
 					}
-				});
-			}
+					fileReader.readAsDataURL(f);
+				}
+			});
 		})
-		
 	} else {
 		alert("Your browser doesn't support to File API")
 	}

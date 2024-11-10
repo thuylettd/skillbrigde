@@ -1040,7 +1040,8 @@ reset style
 html {
   overflow-y: scroll;
   overflow-x: hidden;
-  font-size: 10px; /* Base font size, change to 14px or 16px if needed */
+  font-size: 10px;
+  /* Base font size, change to 14px or 16px if needed */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -1198,7 +1199,8 @@ Layout
      -moz-appearance: none;
           appearance: none;
 }
-.form-control::-ms-input-placeholder { /* Edge 12-18 */
+.form-control::-ms-input-placeholder {
+  /* Edge 12-18 */
   color: #CBD4E1;
 }
 .form-control::-webkit-input-placeholder {
@@ -1228,6 +1230,7 @@ Layout
 }
 .form-control--gray {
   background: -webkit-gradient(linear, left bottom, left top, from(#F1F4F9), to(#F1F4F9)), -webkit-gradient(linear, left bottom, left top, from(#CBD4E1), to(#CBD4E1));
+  background: -o-linear-gradient(bottom, #F1F4F9, #F1F4F9), -o-linear-gradient(bottom, #CBD4E1, #CBD4E1);
   background: linear-gradient(0deg, #F1F4F9, #F1F4F9), linear-gradient(0deg, #CBD4E1, #CBD4E1);
 }
 
@@ -1431,6 +1434,7 @@ Layout
   visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   overflow-y: auto;
 }
@@ -1446,6 +1450,7 @@ Layout
 @media (any-hover: hover) {
   .c-modal__btn-close {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .c-modal__btn-close:hover {
@@ -1539,7 +1544,8 @@ Layout
     padding: 10px 22px;
   }
 }
-.c-modal__dd input::-ms-input-placeholder { /* Edge 12-18 */
+.c-modal__dd input::-ms-input-placeholder {
+  /* Edge 12-18 */
   color: #94A3B8;
 }
 .c-modal__dd input::-webkit-input-placeholder {
@@ -1627,6 +1633,7 @@ Layout
 @media (any-hover: hover) {
   .c-modal__submit {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .c-modal__submit:hover {
@@ -1663,6 +1670,7 @@ Layout
 @media (any-hover: hover) {
   .c-modal .txt-link {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .c-modal .txt-link:hover {
@@ -2108,8 +2116,12 @@ Layout
 
 .c-table {
   border-radius: 15px;
-  overflow-x: scroll;
   margin-bottom: 22px;
+}
+@media screen and (max-width: 1600px) {
+  .c-table {
+    overflow-x: scroll;
+  }
 }
 .c-table table {
   min-width: 1510px;
@@ -2177,6 +2189,7 @@ Layout
 @media (any-hover: hover) {
   .c-table table tr th .btn-sort, .c-table table tr td .btn-sort {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .c-table table tr th .btn-sort:hover, .c-table table tr td .btn-sort:hover {
@@ -2189,6 +2202,7 @@ Layout
 @media (any-hover: hover) {
   .c-table table tr th .txt-link, .c-table table tr td .txt-link {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .c-table table tr th .txt-link:hover, .c-table table tr td .txt-link:hover {
@@ -2206,7 +2220,6 @@ Layout
 }
 .c-table--company02 {
   height: 715px;
-  overflow-y: auto;
   margin-bottom: 0;
 }
 .c-table--company02 table {
@@ -2294,6 +2307,7 @@ Layout
 @media (any-hover: hover) {
   .action-content li a {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .action-content li a:hover {
@@ -2351,6 +2365,7 @@ Layout
 @media (any-hover: hover) {
   .btn-action {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .btn-action:hover {
@@ -2403,6 +2418,7 @@ Layout
   left: 2px;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .c-switch input {
@@ -2414,6 +2430,7 @@ Layout
 }
 .c-switch input:checked + div::before {
   background: -webkit-gradient(linear, left top, right top, from(#F5601B), to(#FF862A));
+  background: -o-linear-gradient(left, #F5601B 0%, #FF862A 100%);
   background: linear-gradient(90deg, #F5601B 0%, #FF862A 100%);
 }
 .c-switch input:checked + div:after {
@@ -2425,6 +2442,7 @@ Layout
 @media (any-hover: hover) {
   .c-switch input:checked + div a {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .c-switch input:checked + div a:hover {
@@ -2481,6 +2499,7 @@ Layout
 }
 .box-alert--success {
   border: 1px solid #43D590;
+  background: -o-linear-gradient(355.23deg, #32BB71 15.3%, #2A9D8F 113.45%);
   background: linear-gradient(94.77deg, #32BB71 15.3%, #2A9D8F 113.45%);
 }
 .box-alert--success .box-alert__content-txt::before {
@@ -2488,6 +2507,7 @@ Layout
 }
 .box-alert--error {
   border: 1px solid #F0863A;
+  background: -o-linear-gradient(354.54deg, #F6743E -6.96%, #D42525 108.25%);
   background: linear-gradient(95.46deg, #F6743E -6.96%, #D42525 108.25%);
 }
 .box-alert--error .box-alert__content-txt::before {
@@ -2528,6 +2548,7 @@ Layout
   padding: 0.5px 13px;
   margin: 0;
   -webkit-transition: 0.1s border-color ease-in-out;
+  -o-transition: 0.1s border-color ease-in-out;
   transition: 0.1s border-color ease-in-out;
   cursor: pointer;
 }
@@ -2551,6 +2572,7 @@ Layout
   position: absolute;
   top: 16px;
   right: 14px;
+  pointer-events: none;
 }
 
 .multiSelect_list {
@@ -2575,6 +2597,7 @@ Layout
       transform-origin: 0 0;
   transition: opacity 0.1s ease, visibility 0.1s ease, -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   -webkit-transition: opacity 0.1s ease, visibility 0.1s ease, -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  -o-transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   -webkit-transform: scale(0.8) translate(0, 4px);
@@ -2610,6 +2633,7 @@ Layout
   -ms-transform: translate(6px, 0);
       transform: translate(6px, 0);
   -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
   position: relative;
 }
@@ -2628,6 +2652,7 @@ Layout
           transform: scale(0);
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2654,6 +2679,7 @@ Layout
   outline: none;
   position: relative;
   -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 
@@ -2665,6 +2691,7 @@ Layout
       transform: scale(1) translate(0, 12px);
   transition: opacity 0.15s ease, visibility 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   -webkit-transition: opacity 0.15s ease, visibility 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  -o-transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
 }
@@ -2748,6 +2775,7 @@ Layout
   color: #b8bcbf;
   pointer-events: none;
   -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 
@@ -2887,6 +2915,7 @@ Component
 @media (any-hover: hover) {
   .c-txt__add {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .c-txt__add:hover {
@@ -2904,7 +2933,7 @@ Component
   margin-right: 8px;
 }
 .c-txt__add--sm {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 .c-txt__add--sm::before {
@@ -2956,7 +2985,9 @@ Component
   -ms-flex-align: center;
   -webkit-box-align: center;
           align-items: center;
+  font-family: "Averta Std CY", sans-serif;
   background: -webkit-gradient(linear, left top, right top, from(#F5601B), to(#FF862A));
+  background: -o-linear-gradient(left, #F5601B 0%, #FF862A 100%);
   background: linear-gradient(90deg, #F5601B 0%, #FF862A 100%);
   width: 100%;
   height: 50px;
@@ -2969,6 +3000,7 @@ Component
   cursor: pointer;
   margin-top: 24px;
   -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
   transition: 0.3s all;
 }
 @media screen and (max-width: 834px) {
@@ -2977,6 +3009,7 @@ Component
   }
 }
 .c-btn__01:hover {
+  background: -o-linear-gradient(10.74deg, #F5601B -758.89%, #F5601B 397.15%);
   background: linear-gradient(79.26deg, #F5601B -758.89%, #F5601B 397.15%);
   opacity: 1;
 }
@@ -3022,6 +3055,7 @@ Component
   margin-left: 10px;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .c-btn__01--blue {
@@ -3071,6 +3105,7 @@ Utility
 @media (any-hover: hover) {
   .u-fn-hover {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .u-fn-hover:hover {
@@ -3126,12 +3161,10 @@ Utility
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
   -webkit-transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* ====================================================
-Module
-==================================================== */
 .cms-main {
   display: -ms-flexbox;
   display: -webkit-box;
@@ -3235,15 +3268,15 @@ Module
 }
 .cms-sidebar__nav li.is-active a {
   color: #fff;
-  background: rgba(0, 0, 0, 0.5019607843);
-  -webkit-box-shadow: 0px 4px 24px 0px rgba(32, 0, 0, 0.0392156863);
-          box-shadow: 0px 4px 24px 0px rgba(32, 0, 0, 0.0392156863);
+  background: #00000080;
+  -webkit-box-shadow: 0px 4px 24px 0px #2000000A;
+          box-shadow: 0px 4px 24px 0px #2000000A;
 }
 .cms-sidebar__nav li:hover a {
   color: #fff;
-  background: rgba(0, 0, 0, 0.5019607843);
-  -webkit-box-shadow: 0px 4px 24px 0px rgba(32, 0, 0, 0.0392156863);
-          box-shadow: 0px 4px 24px 0px rgba(32, 0, 0, 0.0392156863);
+  background: #00000080;
+  -webkit-box-shadow: 0px 4px 24px 0px #2000000A;
+          box-shadow: 0px 4px 24px 0px #2000000A;
 }
 .cms-content {
   width: calc(100% - 330px);
@@ -3270,10 +3303,11 @@ Module
   background: #fff;
   -webkit-box-shadow: 0px 5px 8px 0px rgba(41, 85, 170, 0.11);
           box-shadow: 0px 5px 8px 0px rgba(41, 85, 170, 0.11);
+  font-family: "Averta Std CY", sans-serif;
 }
 .cms-heading__ttl {
   font-size: 2.4rem;
-  font-family: "Averta Std CY Bold", sans-serif;
+  font-family: "Averta Std CY", sans-serif;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -3324,6 +3358,7 @@ Module
 @media (any-hover: hover) {
   .cms-heading__control-user > a {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .cms-heading__control-user > a:hover {
@@ -3343,6 +3378,7 @@ Module
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
 .cms-heading__control-user > a.is-active:after {
@@ -3374,8 +3410,8 @@ Module
   z-index: 2;
   padding: 16px;
   display: none;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(141, 160, 208, 0.1215686275);
-          box-shadow: 0px 8px 16px 0px rgba(141, 160, 208, 0.1215686275);
+  -webkit-box-shadow: 0px 8px 16px 0px #8DA0D01F;
+          box-shadow: 0px 8px 16px 0px #8DA0D01F;
 }
 .c-dropdown li {
   margin-bottom: 4px;
@@ -3402,6 +3438,7 @@ Module
 @media (any-hover: hover) {
   .c-dropdown li a {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .c-dropdown li a:hover {
@@ -3421,9 +3458,6 @@ Module
   -webkit-overflow-scrolling: auto;
 }
 
-/* ====================================================
-Pages
-==================================================== */
 .company-detail {
   padding-bottom: 30px;
 }
@@ -3584,6 +3618,7 @@ Pages
 }
 .manpower-page__pagination .page.current a {
   background: -webkit-gradient(linear, left top, right top, from(#F5601B), to(#FF862A));
+  background: -o-linear-gradient(left, #F5601B 0%, #FF862A 100%);
   background: linear-gradient(90deg, #F5601B 0%, #FF862A 100%);
   border-color: transparent;
   color: #fff;
@@ -3625,6 +3660,7 @@ Pages
 @media (any-hover: hover) {
   .manpower-page__postperpage .form-control {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .manpower-page__postperpage .form-control:hover {
@@ -3859,6 +3895,7 @@ Pages
 @media (any-hover: hover) {
   .company-gallery__list li .remove {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .company-gallery__list li .remove:hover {
@@ -4022,6 +4059,9 @@ Pages
   width: calc(100% - 120px);
 }
 
+.contact-person {
+  counter-increment: div;
+}
 .contact-person__field .form-control {
   margin-bottom: 6px;
 }
@@ -4033,6 +4073,9 @@ Pages
 .contact-person__field--added {
   padding-right: 32px;
   position: relative;
+}
+.contact-person__field--added:nth-child(n+2) .contact-person__field-delete {
+  top: 36px;
 }
 .contact-person__field-delete {
   width: 24px;
@@ -4046,6 +4089,10 @@ Pages
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+.contact-person .company-detail__field-label .number:after {
+  counter-increment: div;
+  content: counter(div);
 }
 
 .is-edit-page .c-layout__left {
@@ -4086,6 +4133,22 @@ Pages
 }
 .company-address__label {
   font-size: 1.4rem;
+}
+.company-address__label:first-child {
+  padding-left: 10px;
+  position: relative;
+  margin-left: 10px;
+}
+.company-address__label:first-child:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #000;
+  border-radius: 100%;
+  top: 7px;
+  left: 0;
 }
 .company-address__iframe {
   border-radius: 12px;
@@ -4172,6 +4235,7 @@ Pages
 @media (any-hover: hover) {
   .c-grid__control button {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .c-grid__control button:hover {
@@ -4214,6 +4278,7 @@ Pages
 @media (any-hover: hover) {
   .btn-upload {
     -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
   }
   .btn-upload:hover {
@@ -4238,4 +4303,11 @@ Pages
   width: 100%;
   cursor: pointer;
 }
+
+/* ====================================================
+Module
+==================================================== */
+/* ====================================================
+Pages
+==================================================== */
 /*# sourceMappingURL=maps/styles.css.map */
