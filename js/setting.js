@@ -139,18 +139,18 @@ $('.js-add-address').click(function (e) {
 jQuery(function () {
 	jQuery('.multiSelect').each(function (e) {
 		var self = jQuery(this);
-		
+
 		var field = self.find('.multiSelect_field');
 		var fieldOption = field.find('option');
 		var placeholder = field.attr('data-placeholder');
 		var select_id = self.find('.multiSelect_field').attr('id');
-		
+
 		field.hide().after(`<div class="multiSelect_dropdown"></div>
 						  <span class="multiSelect_placeholder">` + placeholder + `</span>
 						  <ul class="multiSelect_list"></ul>
 						  <span class="multiSelect_arrow"></span>`);
-		
-	    var list = self.find('.multiSelect_list');
+
+		var list = self.find('.multiSelect_list');
 		fieldOption.each(function (e) {
 			list.append(`<li class="multiSelect_option" data-value="` + jQuery(this).val() + `">
 											  <a class="multiSelect_text">`+ jQuery(this).text() + `</a>
@@ -222,7 +222,7 @@ $(document).on('change', 'input[type="file"]', function () {
 		$(this).parent().prev().show();
 		$('.btn-upload').addClass('disable');
 	})
-}); 
+});
 
 
 
@@ -268,18 +268,23 @@ $(document).ready(function () {
 				var files = e.target.files,
 					filesLength = files.length;
 				count_item++;
+				
 				for (var i = 0; i < 5; i++) {
 					var f = files[i];
 					var fileReader = new FileReader();
 					fileReader.onload = (function (e) {
 						var template_img = `<li><img src="` + e.target.result + `" alt=""><span class="remove"></span></li>`;
-						if (data_image == "image-company-03" || data_image == "image-company-03SP") { 
+						if (data_image == "image-company-03" || data_image == "image-company-03SP") {
 							sefl.closest('.company-gallery__box').find("#" + data_image).append(template_img);
 							sefl.closest('.company-gallery__box').find(".content-empty").hide();
+							sefl.closest('.company-gallery__box').find(".btn-edit").show();
+							sefl.closest('.company-gallery__box').find(".btn-upload").addClass('hide');
 							$(".remove").click(function () {
 								$(this).parent().remove();
 								if (sefl.closest('.company-gallery__box').find(".company-gallery__list li").length == 0) {
 									sefl.closest('.company-gallery__box').find(".content-empty").show();
+									sefl.closest('.company-gallery__box').find(".btn-edit").hide();
+									sefl.closest('.company-gallery__box').find(".btn-upload").removeClass('hide');
 								} else if (sefl.closest('.company-gallery__box').find(".company-gallery__list li").length < 5) {
 									sefl.parent().removeClass('is-disabled');
 								}
@@ -289,16 +294,16 @@ $(document).ready(function () {
 							sefl.closest('.company-gallery').find(".content-empty").hide();
 							$(".remove").click(function () {
 								$(this).parent().remove();
-								i--;
+								var count_item_remove = sefl.closest('.company-gallery').find(".company-gallery__list li").length;
+								count_item = count_item_remove;
 								if (sefl.closest('.company-gallery').find(".company-gallery__list li").length == 0) {
 									sefl.closest('.company-gallery').find(".content-empty").show();
-								}else if (sefl.closest('.company-gallery').find(".company-gallery__list li").length < 5) {
+								} else if (sefl.closest('.company-gallery').find(".company-gallery__list li").length < 5) {
 									sefl.parent().removeClass('is-disabled');
 								}
 							});
 						}
 					});
-					console.log(count_item, i);
 					if (i == 4) {
 						sefl.parent().addClass('is-disabled');
 					}
@@ -307,6 +312,9 @@ $(document).ready(function () {
 					}
 					fileReader.readAsDataURL(f);
 				}
+
+				var count_item_current = $('#' + data_image).find('li').length;
+				console.log(count_item_current);
 			});
 		})
 	} else {
@@ -314,4 +322,79 @@ $(document).ready(function () {
 	}
 });
 
+
+// jQuery(document).ready(function () {
+// 	ImgUpload();
+// });
+
+// function ImgUpload() {
+// 	var imgWrap = "";
+// 	var imgArray = [];
+// 	$('.upload-multile-file').each(function () {
+// 		let data_image = $(this).attr('data-img');
+// 		$(this).on('change', function (e) {
+// 			imgWrap = $('#' + data_image);
+// 			var maxLength = $(this).attr('data-max_length');
+
+// 			var files = e.target.files;
+// 			var filesArr = Array.prototype.slice.call(files);
+// 			var iterator = 0;
+// 			var sefl = $(this);
+// 			console.log(maxLength);
+// 			console.log(imgArray.length);
+// 			filesArr.forEach(function (f, index) {
+
+// 				if (!f.type.match('image.*')) {
+// 					return;
+// 				}
+
+// 				if (imgArray.length >= maxLength) {
+					
+// 					sefl.parent().addClass('is-disabled');
+// 					return false
+
+// 				} else {
+// 					sefl.parent().removeClass('is-disabled');
+// 					var len = 0;
+// 					for (var i = 0; i < imgArray.length; i++) {
+// 						if (imgArray[i] !== undefined) {
+// 							len++;
+// 						}
+// 					}
+// 					if (len >= maxLength) {
+// 						sefl.parent().addClass('is-disabled');
+// 						return false;
+
+// 					} else {
+// 						sefl.parent().removeClass('is-disabled');
+// 						imgArray.push(f);
+
+// 						var reader = new FileReader();
+// 						reader.onload = function (e) {
+// 							var html = `<li><img src="` + e.target.result + `" data-number="`+ $(".remove").length +`" data-file="` + f.name + `"><span class="remove"></span></li>`;
+// 							imgWrap.append(html);
+// 							iterator++;
+// 						}
+// 						reader.readAsDataURL(f);
+// 					}
+// 				}
+// 			});
+// 		});
+// 	});
+
+// 	$('body').on('click', ".remove", function (e) {
+// 		var file = $(this).prev().data("file");
+// 		console.log(imgArray);
+// 		if (imgArray.length < 6) {
+// 			$(this).closest(".company-gallery").find(".btn-upload").removeClass('is-disabled');
+// 		}
+// 		for (var i = 0; i < imgArray.length; i++) {
+// 			if (imgArray[i].name === file) {
+// 				imgArray.splice(i, 1);
+// 				break;
+// 			}
+// 		}
+// 		$(this).parent().remove();
+// 	});
+// }
 
