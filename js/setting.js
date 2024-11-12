@@ -89,13 +89,13 @@ $('.js-add-contact-person').click(function (e) {
 	id_contact_person++;
 	if (id_contact_person > 1) {
 		$(this).before(`<div class="contact-person__field contact-person__field--added"><span class="company-detail__field-label">Tên và cách thức người đảm nhận liên lạc số <span class="number"></span></span>
-			<input type="text" class="form-control" value="Full Name A">
+			<input type="text" class="form-control" value="" placeholder="Tên người đảm nhận">
 			<textarea name="" id="" class="form-control form-control--textarea" placeholder="Cách liên lạc với người đảm nhận"></textarea>
 			<button class="contact-person__field-delete"></button>
 		</div>` );
 	} else {
 		$(this).before(`<div class="contact-person__field contact-person__field--added">
-			<input type="text" class="form-control" value="Full Name A">
+			<input type="text" class="form-control" value="" placeholder="Tên người đảm nhận">
 			<textarea name="" id="" class="form-control form-control--textarea" placeholder="Cách liên lạc với người đảm nhận"></textarea>
 			<button class="contact-person__field-delete"></button>
 		</div>` );
@@ -103,8 +103,13 @@ $('.js-add-contact-person').click(function (e) {
 
 
 	$('.contact-person__field-delete').click(function (e) {
+		id_contact_person--;
+		if (id_contact_person < 1) {
+			id_contact_person = 0;
+		}
 		e.preventDefault();
 		$(this).parent().remove();
+		console.log(id_contact_person);
 	})
 })
 
