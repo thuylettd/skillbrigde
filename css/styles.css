@@ -3368,6 +3368,18 @@ Utility
 .cms-sidebar__nav li:nth-child(12).is-active a::before {
   background: url(../img/common/ico-sidebar-9.png) no-repeat center/100%;
 }
+.cms-sidebar__nav li:nth-child(13) a::before {
+  background: url(../img/common/ico-sidebar-12.png) no-repeat center/100%;
+}
+.cms-sidebar__nav li:nth-child(13).is-active a::before {
+  background: url(../img/common/ico-sidebar-12-active.png) no-repeat center/100%;
+}
+.cms-sidebar__nav li:nth-child(14) a::before {
+  background: url(../img/common/ico-sidebar-12.png) no-repeat center/100%;
+}
+.cms-sidebar__nav li:nth-child(14).is-active a::before {
+  background: url(../img/common/ico-sidebar-12-active.png) no-repeat center/100%;
+}
 .cms-sidebar__nav li.is-active a {
   color: #fff;
   background: #00000080;
