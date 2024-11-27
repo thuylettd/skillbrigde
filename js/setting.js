@@ -40,7 +40,7 @@ $('.js-show-modal').click(function (e) {
 	$('html').addClass("js-locked");
 	$('.c-dropdown').slideUp();
 	$('.action-content').slideUp();
-
+	$('.btn-action').removeClass('is-active');
 	//height modal > 100vh
 
 	if ($('#' + modal_id).find('.c-modal__wp').outerHeight() > $(window).height()) {

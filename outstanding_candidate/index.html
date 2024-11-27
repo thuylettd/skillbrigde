@@ -64,7 +64,11 @@
 							<ul class="category-list">
 								<li>
 									<span>Category name 1 (8/8)</span>
-									<button class="category-list__edit"></button>
+									<button class="category-list__edit btn-action"></button>
+									<ul class="action-content">
+										<li class="action-content__edit js-show-modal" data-modal="edit-company-category"><a href="#">Chỉnh sửa</a></li>
+										<li class="action-content__delete js-show-modal" data-modal="disable-working"><a href="#">Xoá</a></li>
+									</ul>
 									<label class="c-switch">
 										<input type="checkbox" checked="checked">
 										<div></div>
@@ -72,7 +76,11 @@
 								</li>
 								<li>
 									<span>Category name 2 (7/8)</span>
-									<button class="category-list__edit"></button>
+									<button class="category-list__edit btn-action"></button>
+									<ul class="action-content">
+										<li class="action-content__edit js-show-modal" data-modal="edit-company-category"><a href="#">Chỉnh sửa</a></li>
+										<li class="action-content__delete js-show-modal" data-modal="disable-working"><a href="#">Xoá</a></li>
+									</ul>
 									<label class="c-switch">
 										<input type="checkbox" checked="checked">
 										<div></div>
@@ -80,7 +88,11 @@
 								</li>
 								<li>
 									<span>Category name 3 (7/8)</span>
-									<button class="category-list__edit"></button>
+									<button class="category-list__edit btn-action"></button>
+									<ul class="action-content">
+										<li class="action-content__edit js-show-modal" data-modal="edit-company-category"><a href="#">Chỉnh sửa</a></li>
+										<li class="action-content__delete js-show-modal" data-modal="disable-working"><a href="#">Xoá</a></li>
+									</ul>
 									<label class="c-switch">
 										<input type="checkbox" checked="checked">
 										<div></div>
@@ -88,7 +100,11 @@
 								</li>
 								<li>
 									<span>Category name 4 (8/8)</span>
-									<button class="category-list__edit"></button>
+									<button class="category-list__edit btn-action"></button>
+									<ul class="action-content">
+										<li class="action-content__edit js-show-modal" data-modal="edit-company-category"><a href="#">Chỉnh sửa</a></li>
+										<li class="action-content__delete js-show-modal" data-modal="disable-working"><a href="#">Xoá</a></li>
+									</ul>
 									<label class="c-switch">
 										<input type="checkbox">
 										<div></div>
@@ -96,7 +112,11 @@
 								</li>
 								<li>
 									<span>Category name 5 (8/8)</span>
-									<button class="category-list__edit"></button>
+									<button class="category-list__edit btn-action"></button>
+									<ul class="action-content">
+										<li class="action-content__edit js-show-modal" data-modal="edit-company-category"><a href="#">Chỉnh sửa</a></li>
+										<li class="action-content__delete js-show-modal" data-modal="disable-working"><a href="#">Xoá</a></li>
+									</ul>
 									<label class="c-switch">
 										<input type="checkbox">
 										<div></div>
@@ -104,7 +124,11 @@
 								</li>
 								<li>
 									<span>Category name 6 (8/8)</span>
-									<button class="category-list__edit"></button>
+									<button class="category-list__edit btn-action"></button>
+									<ul class="action-content">
+										<li class="action-content__edit js-show-modal" data-modal="edit-company-category"><a href="#">Chỉnh sửa</a></li>
+										<li class="action-content__delete js-show-modal" data-modal="disable-working"><a href="#">Xoá</a></li>
+									</ul>
 									<label class="c-switch">
 										<input type="checkbox">
 										<div></div>
@@ -257,6 +281,57 @@
 						<div class="c-modal__control">
 							<button class="c-btn__01 c-btn__01--120x48 c-btn__01--gray js-cancel">Hủy</button>
 							<a href="#" class="c-btn__01 c-btn__01--120x48">Lưu lại</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal create-company" id="edit-company-category">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<h3 class="c-modal__ttl">Chỉnh sửa category</h3>
+						<div class="create-company__wp">
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Tiếng Nhật</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" value="Category name 1">
+								</dd>
+							</dl>
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Tiếng Việt</dt>
+								<dd class="create-company__field-input">
+									<input type="text" class="form-control" value="Category name 1">
+								</dd>
+							</dl>
+							<dl class="create-company__field create-company__field--full">
+								<dt class="create-company__field-label"><span>*</span>Trạng thái</dt>
+								<dd class="create-company__field-input">
+									<label class="c-switch c-switch--styles02">
+										<input type="checkbox" checked="checked">
+										<div>Public</div>
+									</label>
+								</dd>
+							</dl>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--120x48 c-btn__01--gray js-cancel">Hủy</button>
+							<a href="#" class="c-btn__01 c-btn__01--120x48">Lưu lại</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="c-modal c-modal--confirm" id="disable-working">
+				<div class="c-modal__wp">
+					<form action="" method="post" class="c-modal__form">
+						<div class="c-modal__heading">
+							<h3 class="c-modal__ttl">Cảnh báo</h3>
+							<span class="c-modal__close js-cancel"><img src="../img/common/x-close.png" alt="" width="24"></span>
+						</div>
+						<div class="c-modal__content c-al--c">
+							<p class="c-txt__02">Bạn có chắc chắn muốn xóa danh mục này không?</p>
+						</div>
+						<div class="c-modal__control">
+							<button class="c-btn__01 c-btn__01--gray c-btn__01--auto js-cancel">Cancel</button>
+							<a href="#" class="c-btn__01">Xác nhận</a>
 						</div>
 					</form>
 				</div>

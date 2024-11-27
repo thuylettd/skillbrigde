@@ -3938,6 +3938,14 @@ Utility
     opacity: 0.7;
   }
 }
+.category-list__edit.is-active {
+  background: url(../img/common/edit-2.png) no-repeat center/100%;
+  opacity: 1;
+  visibility: visible;
+}
+.category-list__edit + .action-content {
+  top: 40px;
+}
 
 .box-add-cate {
   display: -ms-flexbox;
