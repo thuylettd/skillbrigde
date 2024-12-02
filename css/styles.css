@@ -1368,6 +1368,9 @@ Layout
   background: transparent;
   padding: 0;
 }
+.c-layout--types02 {
+  gap: 0 30px;
+}
 .c-layout--types02 .c-layout__left, .c-layout--types02 .c-layout__right {
   width: 50%;
 }
@@ -2523,6 +2526,7 @@ Layout
 }
 
 .box-alert {
+  font-family: "Averta Std CY", sans-serif;
   max-width: 343px;
   width: 100%;
   height: 81px;
@@ -2537,6 +2541,18 @@ Layout
   line-height: 1.4;
   color: #fff;
   border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+}
+.box-alert:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 98%;
+  height: 2px;
+  background: #fff;
+  bottom: 0;
+  right: 1%;
 }
 .box-alert__close {
   width: 18px;
@@ -2585,7 +2601,32 @@ Layout
 .box-alert--error .box-alert__content-txt::before {
   background: url(../img/common/ico-error.png) no-repeat center/100%;
 }
+.box-alert.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.box-alert.is-show:after {
+  -webkit-animation: process 5s forwards;
+          animation: process 5s forwards;
+}
 
+@-webkit-keyframes process {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes process {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
 .required {
   color: #ED2649;
 }
@@ -3584,6 +3625,14 @@ Utility
           justify-content: space-between;
   font-size: 1.6rem;
 }
+.company-detail__wp--contact .flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+}
+.company-detail__wp--contact .company-detail__field-text a {
+  color: #0072F8;
+}
 .company-detail__field {
   margin-bottom: 24px;
   font-family: "Montserrat", sans-serif;
@@ -3618,6 +3667,184 @@ Utility
   color: #3491FF;
   margin-left: 12px;
   font-weight: 600;
+}
+
+.list-comment {
+  font-family: "Averta Std CY", sans-serif;
+  border-top: 1px solid #E2E8F0;
+  padding-top: 24px;
+  padding: 24px 16px;
+  min-height: 60vh;
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+.list-comment__item {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+.list-comment__item:nth-child(even) .list-comment__avatar {
+  background: #CBD4E1;
+}
+.list-comment__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(0, 114, 248, 0.4);
+}
+.list-comment__avatar img {
+  opacity: 0;
+}
+.list-comment__ct {
+  width: calc(100% - 40px);
+  padding-left: 16px;
+}
+.list-comment__ct-heading {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  gap: 0 16px;
+  margin-bottom: 10px;
+}
+.list-comment__ct-heading .txt-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+.list-comment__ct-heading .txt-date {
+  font-size: 12px;
+  color: #94A3B8;
+}
+.list-comment__ct-main {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #64748B;
+}
+.list-comment__ct-main p {
+  margin-bottom: 16px;
+}
+.list-comment__ct-main img {
+  max-width: 100%;
+  margin: 0 auto 15px;
+  display: block;
+}
+.list-comment .btn-action {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.list-comment .action-content {
+  top: 20px;
+  right: 0;
+}
+
+.box-chat {
+  font-family: "Averta Std CY", sans-serif;
+  border-radius: 30px;
+  border: 1px solid #E2E8F0;
+  background: #F6F8FC;
+  position: relative;
+  overflow: hidden;
+}
+.box-chat .form-control {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 0;
+  padding-left: 64px;
+}
+.box-chat .upload-comment {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 13px;
+  left: 24px;
+  display: block !important;
+}
+.box-chat .upload-comment:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  background: url(../img/gallery.png) no-repeat center/100%;
+  pointer-events: none;
+}
+.box-chat .upload-comment input {
+  opacity: 0;
+  width: 24px;
+}
+.box-chat .btn-send {
+  width: 24px;
+  height: 24px;
+  background: url(../img/send.png) no-repeat center/100%;
+  position: absolute;
+  top: 13px;
+  right: 24px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.contact-status {
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: 5px;
+  background: #EAF3FD;
+  color: #0072F8;
+  font-size: 14px;
+  font-weight: 600;
+}
+.contact-status--green {
+  background: #D9F6E8;
+  color: #009F50;
+}
+
+.btn-copy {
+  color: #F5601B;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  z-index: 10;
+  height: 48px;
+  border: none;
+  font-size: 16px;
+  font-family: "Averta Std CY", sans-serif;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  background: #fff;
+  padding-right: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-copy:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../img/common/copy.png) no-repeat center/100%;
+  position: relative;
+  left: 0;
+  margin-right: 10px;
 }
 
 .manpower-page__control {
@@ -3799,6 +4026,39 @@ Utility
   text-align: center;
   margin-left: 8px;
   padding: 0 10px;
+}
+
+#edit-contact .create-company__field {
+  width: 100%;
+}
+#edit-contact .create-company__field-input {
+  position: relative;
+}
+#edit-contact .form-control--select {
+  color: #000;
+  background: #fff url(../img/common/chevron-down.png) no-repeat right 15px center/24px 24px;
+}
+
+#copied-success {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  right: 0;
+  text-align: center;
+  font-size: 16px;
+  bottom: 30px;
+  z-index: 1000;
+  color: #fff;
+  background: #F5601B;
+  width: 100px;
+  display: inline-block;
+  padding: 10px 10px;
+  opacity: 0;
+  -webkit-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 .company-featured {

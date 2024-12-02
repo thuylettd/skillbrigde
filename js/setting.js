@@ -29,6 +29,11 @@ $('.js-cancel').click(function (e) {
 	$('html').removeClass("js-locked");
 })
 
+$('.js-cancel-alert').click(function (e) {
+	e.preventDefault();
+	$(this).closest('.box-alert').removeClass('is-show');
+})
+
 
 $('.js-show-modal').click(function (e) {
 	e.preventDefault();
@@ -273,7 +278,7 @@ $(document).ready(function () {
 				var files = e.target.files,
 					filesLength = files.length;
 				count_item++;
-				
+
 				for (var i = 0; i < 5; i++) {
 					var f = files[i];
 					var fileReader = new FileReader();
@@ -354,7 +359,7 @@ $(document).ready(function () {
 // 				}
 
 // 				if (imgArray.length >= maxLength) {
-					
+
 // 					sefl.parent().addClass('is-disabled');
 // 					return false
 
@@ -403,3 +408,13 @@ $(document).ready(function () {
 // 	});
 // }
 
+
+
+$('.btn-copy').click(function (e) {
+	e.preventDefault();
+	let copySuccess = $('#copied-success');
+	$(this).prev().select();
+	document.execCommand("copy");
+	copySuccess.css('opacity', 1);
+	setTimeout(function(){ copySuccess.css('opacity', 0) }, 500);
+})
