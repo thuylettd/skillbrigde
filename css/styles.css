@@ -3674,7 +3674,7 @@ Utility
   border-top: 1px solid #E2E8F0;
   padding-top: 24px;
   padding: 24px 16px;
-  min-height: 60vh;
+  height: 60vh;
   overflow-y: auto;
   margin-bottom: 30px;
 }
@@ -3736,8 +3736,8 @@ Utility
   margin-bottom: 16px;
 }
 .list-comment__ct-main img {
-  max-width: 100%;
-  margin: 0 auto 15px;
+  width: 50%;
+  margin-bottom: 15px;
   display: block;
 }
 .list-comment .btn-action {
